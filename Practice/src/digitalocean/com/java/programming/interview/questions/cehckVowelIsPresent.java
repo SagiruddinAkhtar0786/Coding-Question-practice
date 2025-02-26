@@ -13,7 +13,7 @@ public class cehckVowelIsPresent {
 		
 		return w.matches(".*[aeiou].*");
 		
-		
+		//chek
 		//w.mat
 	}
 	
