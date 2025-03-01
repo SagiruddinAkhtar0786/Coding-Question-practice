@@ -2,7 +2,7 @@ package com.sorting.algoriithm;
 
 import java.util.Arrays;
 /*
- Merge Sort is a "divide and conquer" algorithm that:
+ Merge Sort is a "divide and conquer" algorithm that:  https://www.youtube.com/watch?v=aDX3MFL0tYs
 
 Divides the array into two halves.
 Recursively sorts each half.

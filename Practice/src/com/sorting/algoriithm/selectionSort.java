@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class selectionSort {
 
-	//Time Complexity: O(n²) (Not the best for large arrays) ...
+	//Time Complexity: O(n²) (Not the best for large arrays) ... 
 	//How It Works: Finds the  smallest element() and swaps it with the current index => current index will be first loop -i
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
