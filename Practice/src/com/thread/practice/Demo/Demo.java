@@ -1,5 +1,7 @@
 package com.thread.practice.Demo;
 
+
+// single task from single thread
 public class Demo extends Thread{
 
 	@Override
