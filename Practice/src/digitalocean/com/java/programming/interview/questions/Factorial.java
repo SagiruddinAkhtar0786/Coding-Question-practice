@@ -1,5 +1,7 @@
 package digitalocean.com.java.programming.interview.questions;
 
+import java.util.stream.IntStream;
+
 public class Factorial {
 	
 	private static int findFactorial(int n) {
@@ -32,6 +34,12 @@ public class Factorial {
 		
 		int factR = factorailUisngRecursion(n);
 		System.out.println("factorial using Recursion " +factR);
+		
+		//using java8
+		
+		int result = IntStream.rangeClosed(1,n).reduce(1, (a,b)->a*b);
+		System.out.println("result "+result);
+		
 
 		
 	}
