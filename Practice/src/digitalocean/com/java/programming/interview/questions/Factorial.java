@@ -10,6 +10,16 @@ public class Factorial {
 		}
 		return fact;
 	}
+	
+	private static int factorailUisngRecursion(int n) {
+		
+		//int fact = 1;
+		if(n <= 1)
+			return 1;
+		
+		return n * factorailUisngRecursion(n-1) ;
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -17,6 +27,14 @@ public class Factorial {
 		
 		int fact = findFactorial(n);
 		System.out.println("factorial of a number :: "+fact);
+		
+		System.out.println("factorial using Recursion ");
+		
+		int factR = factorailUisngRecursion(n);
+		System.out.println("factorial using Recursion " +factR);
+
+		
 	}
+	
 
 }
