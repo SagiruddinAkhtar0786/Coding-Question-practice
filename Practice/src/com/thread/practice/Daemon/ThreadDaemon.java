@@ -5,6 +5,7 @@ public class ThreadDaemon extends Thread {
 	
 	@Override
 	public void run() {
+		System.out.println("is Daemon :: "+Thread.currentThread().isDaemon());
 		System.out.println("Run Method");
 	}
 	
