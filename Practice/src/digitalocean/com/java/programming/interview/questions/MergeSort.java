@@ -1,90 +1,63 @@
 package digitalocean.com.java.programming.interview.questions;
 
-/*public class MergeSort {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-
-	}
-
-}*/
-
-
-//package com.sorting.algoriithm;
-
 import java.util.Arrays;
-/*
- Merge Sort is a "divide and conquer" algorithm that:  https://www.youtube.com/watch?v=aDX3MFL0tYs
-
-Divides the array into two halves.
-Recursively sorts each half.
-Merges the two sorted halves to get the final sorted array.
-The recursion continues until the subarrays have only one element (base case)
- */
 
 public class MergeSort {
-
-	public static void mergeSort(int arr[], int left, int right) {
+	
+	
+	private static void divideArray(int arr[]  ,int start ,int end) {
 		
-		System.out.println("mergeSort >> "+Arrays.toString(arr) +" left : "+left+" right : "+right);
-
-		if (left < right) {
-			// int mid = left+(right - left)/2;
-			int mid = (left + right) / 2;
-
-			mergeSort(arr, left, mid);
-			mergeSort(arr, mid + 1, right);
-
-			merge(arr, left, right, mid);
-
+		if(start < end) {
+			int mid = (start+end)/2;
+			divideArray(arr,start,mid);
+			divideArray(arr,mid+1,end);
+			mergeDivdedArray(arr,start,end,mid);
+			//System.out.println("merged Array :: "+Arrays.toString(arr));
 		}
 	}
 
-	public static void merge(int arr[], int left, int right, int mid) {
-
-		System.out.println(Arrays.toString(arr) +" left : "+left+" right : "+right+" mid : "+mid);
-		int i = left, j = mid + 1, k = 0;
-		int mergeArr[] = new int[right - left + 1];
-		while (i <= mid && j <= right) {
-			if (arr[i] <= arr[j])
-				mergeArr[k++] = arr[i++];
-			else
-				mergeArr[k++] = arr[j++];
+	private static void mergeDivdedArray(int arr[], int start,int end,int mid) {
+		int i = start , j = mid + 1, k = 0;
+		int mergeArray[] = new int [end - start +1];
+		
+		while( i<= mid && j <= end) {
+			if(arr[i] <= arr[j])
+				mergeArray[k++] = arr[i++];
+			else 
+				mergeArray[k++] = arr[j++];
 		}
-		// Copy remaining elements from left subarray (if any)
-		while (i <= mid) {
-			mergeArr[k++] = arr[i++];
+		while(i <= mid)
+			mergeArray[k++] = arr[i++];
+		while(j <= end)
+			mergeArray[k++] = arr[j++];
+		
+		System.out.println("merged Array... :: "+Arrays.toString(arr));
+		
+		for(int a = 0 , b = start;b <= end ; a++,b++) {
+			arr[b] = mergeArray[a];
 		}
-
-		// Copy remaining elements from right subarray (if any)
-		while (j <= right) {
-			mergeArr[k++] = arr[j++];
-		}
-	//	System.out.println("merged Sorted Array :: " + Arrays.toString(mergeArr));
-
-		// Copy merged elements back to the original array
-		for (k = 0, i = left; i <= right; i++, k++) {
-			arr[i] = mergeArr[k];
-		}
+		
 
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		// 🔹 Time Complexity: O(n log n)
-		// 🔹 How It Works: Recursively splits the array into halves,
-		// sorts, and merges them
-
-		int arr[] = { 1, 4, 2, 6, 1, 8 };
+		///
+		/*
+		 * Merge sort is one of the most efficient sorting algorithms. It works on the principle of
+		 *  “divide and conquer”. It is based on the idea of breaking down a list into several 
+		 *  sub-lists until each sub-list consists of a single element, and then merging those 
+		 *  sub-lists in a manner that results in a sorted list. The following example code shows one 
+		 *  way to use merge sort:*/
 		
-		mergeSort(arr, 0, arr.length - 1);
+		
+		int arr[] = {6,3,6,2,8,6,0,10,2,4,12};
+		
+		divideArray(arr,0,arr.length-1);
+		 
+		System.out.println("Sorted  array >> "+Arrays.toString(arr));
 
-		System.out.println("Sorted Array: " + Arrays.toString(arr));
-
-		//System.out.println("merged Sorted Array :: " + Arrays.toString(mergeArr));
 
 	}
 
 }
+
