@@ -8,6 +8,7 @@ If the key is less than the middle element, then you now need to search only in 
 If the key is greater than the middle element, then you need to search only in the second half of the array.
 If the key is equal to the middle element in the array, then the search ends.
 Finally, if the key is not found in the whole array, then it should return -1. This indicates that the element is not present.
+
  */
 public class BinarySearach {
 	
