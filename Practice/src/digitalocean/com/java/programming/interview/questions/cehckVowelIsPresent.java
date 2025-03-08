@@ -18,11 +18,11 @@ public class cehckVowelIsPresent {
 	}
 	
 	
-	public static int checkVowelNormalmrthod(String w) {
-		for(int  i = 0 ;i<w.length(); i++) {
+	public static int checkVowelNormalmrthod(String str) {
+		for(int  i = 0 ;i<str.length(); i++) {
 			
-			System.out.println("debug :: "+"aeiou".indexOf(w.charAt(i)));
-			if("aeiou".indexOf(w.charAt(i)) != -1)
+			System.out.println("debug :: "+"aeiou".indexOf(str.charAt(i)));
+			if("aeiou".indexOf(str.charAt(i)) != -1)
 				return i;
 					
 		}
