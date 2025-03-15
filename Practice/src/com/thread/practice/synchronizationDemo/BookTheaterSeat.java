@@ -2,10 +2,10 @@ package com.thread.practice.synchronizationDemo;
 
 public class BookTheaterSeat {
 	
-	int TotalSeats = 10; 
+	static int TotalSeats = 20; 
 	
 	//synchronized method
-/*	synchronized void bookSeat(int seats) {
+	static synchronized void bookSeat(int seats) {
 		
 		if(TotalSeats >= seats) {
 			System.out.println("seat booked successfully...");
@@ -15,9 +15,9 @@ public class BookTheaterSeat {
 			System.out.println("seeats can not be booked ....");
 			TotalSeats = TotalSeats-seats;
 		}
-	}*/
+	}
 	
-	
+/*	
  void bookSeat(int seats) {
 	 
 	 System.out.println("thread Name :: " +Thread.currentThread().getName());
@@ -46,6 +46,6 @@ public class BookTheaterSeat {
 	 System.out.println("thread Name :: " +Thread.currentThread().getName());
 
 		
-	}
+	}*/
 
 }

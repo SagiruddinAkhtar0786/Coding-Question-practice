@@ -34,6 +34,19 @@ public class Test {
 		Thread t2 = new Thread(new callThread(BTS,9));
 	
 		t2.start();
+		
+		// creating Object of shared resource again to use static synchronization
+		
+		BookTheaterSeat BTS2 = new BookTheaterSeat();
+		
+		Thread tt1 = new Thread(new callThread(BTS2,7));
+		tt1.start();
+		
+		Thread tt2 = new Thread(new callThread(BTS2,9));
+	
+		tt2.start();
+		
+		
 	}
 
 }
