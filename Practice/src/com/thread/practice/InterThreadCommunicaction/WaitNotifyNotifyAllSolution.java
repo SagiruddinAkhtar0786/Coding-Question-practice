@@ -10,7 +10,7 @@ class totalEarnngss extends Thread {
 			for (int i = 0 ; i < 10; i++) {
 				total +=100;			
 			}
-			
+			// notify to the thread that task completed
 			this.notify();
 		}
 		
