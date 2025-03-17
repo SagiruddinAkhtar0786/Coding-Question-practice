@@ -23,7 +23,7 @@ public class ThreadMain {
 		},"popper").start();
 		
 		System.out.println("Main exits .....");
-
+// synchronizeation
 	}
 
 }
