@@ -13,7 +13,7 @@ public class ThreadMain {
 				System.out.println("Pushed :: "+stack.push(100) +" Thread :: "+Thread.currentThread());
 			}
 		},"pusher").start();
-		
+		//
 		
 		new Thread(() -> {
 			int counter = 0;
