@@ -1,7 +1,11 @@
 package com.practice.LeetCode;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class MajorityElement {
 
@@ -13,7 +17,29 @@ public class MajorityElement {
 		int MajorEle = findMajorityElementUsingLinearTimeAndInO1Space(arr);
 		
 		System.out.println("Majority Element : "+MajorEle);
+		
+		findMajorityElementUsingJava8(arr);
 
+
+	}
+
+	private static void findMajorityElementUsingJava8(int[] arr) {
+		// TODO Auto-generated method stub
+
+		Map<Integer,Long> count = Arrays.stream(arr)
+				.boxed()
+				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		//Function.identity() → Groups elements by their own value.
+		//Collectors.counting() → Counts occurrences of each element.
+		
+	     System.out.println("frequency count using java 8 :: "+count);
+	     
+	     int majorityElement = Collections.max(count.entrySet(), Map.Entry.comparingByValue()).getKey();
+	     Long maxFrequency = Collections.max(count.values());
+	     
+	     System.out.println("Element Frequencies: " + count);
+	        System.out.println("Majority Element: " + majorityElement + " with frequency: " + maxFrequency);
+	     
 	}
 
 	private static int findMajorityElementUsingLinearTimeAndInO1Space(int[] arr) {
@@ -34,8 +60,12 @@ public class MajorityElement {
 
 	private static void findMajorityElementUsingNormalMethod(int[] arr) {
 		// TODO Auto-generated method stub
-		Map<Integer, Integer> count = new HashMap<Integer, Integer>();
 
+			// finding max now among all	
+				
+			Map<Integer, Integer> count = new HashMap<Integer, Integer>();
+		
+		
 		for (int i : arr) {
 			if (count.containsKey(i))
 				count.put(i, count.get(i) + 1);
@@ -55,6 +85,8 @@ public class MajorityElement {
 
 		}
 		System.out.println("Majority element : " + key + " and its frequency :: " + value);
+		
+		
 
 	}
 
