@@ -30,7 +30,6 @@ public class RemoveDuplicates_26_SortedArrays {
 		}
 		
 		System.out.println(Arrays.toString(nums));
-
 		return j+1;
 	}
 
