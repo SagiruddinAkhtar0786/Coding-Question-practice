@@ -1,4 +1,4 @@
-package com.practice.LeetCode;
+package com.practice.LeetCode.ArraysAndString;
 
 public class H_IndexII {
 
