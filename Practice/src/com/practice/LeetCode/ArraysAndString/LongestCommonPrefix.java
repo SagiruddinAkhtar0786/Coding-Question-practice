@@ -13,6 +13,8 @@ public class LongestCommonPrefix {
 		System.out.println("Longest Common prefix :: "+prefix);
 		
 		
+		
+		
 	}
 	private static String longestCommonPrefix(String [] strArr) {
 		
