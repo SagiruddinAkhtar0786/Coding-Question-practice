@@ -6,11 +6,20 @@ public class LengthOfLastWord {
 		// TODO Auto-generated method stub
 		
 		String str = "   fly me   to   the moon  ";
-		String strArr[] = str.split("\\s+");
-		
-		String LastWord = strArr[strArr.length-1];
-		System.out.println(LastWord.length());
+		int len = lengthOfLastWord(str);
+				System.out.println("length of String " +len);
 
+
+	}
+
+	private static int lengthOfLastWord(String str) {
+		// TODO Auto-generated method stub
+
+		String strArr[] = str.split("\\s+");
+
+		String LastWord = strArr[strArr.length - 1];
+		System.out.println(LastWord.length());
+		return LastWord.length();
 	}
 
 }
