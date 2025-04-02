@@ -8,7 +8,7 @@ public class ValidAnagram {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String s = "anagram", t = "nagaram";
+		String s = "ab", t = "a";
 		
 		boolean isAnagram = chkValidAnagram(s,t);
 		if(isAnagram)
@@ -18,15 +18,17 @@ public class ValidAnagram {
 		
 		boolean checkAnagram = chkValidAnagramUsingmap(s,t);
 		if(checkAnagram)
-			System.out.println("true");
+			System.out.println(" >>>true");
 		else
-			System.out.println("false");
+			System.out.println(">>> false");
 		
 	}
 
 	private static boolean chkValidAnagramUsingmap(String s, String t) {
 		// TODO Auto-generated method stub
 		Map<Character,Integer> map = new HashMap<>();
+		if(s.length() != t.length())
+            return false;
 		for(char ch : s.toCharArray()) {
 			map.put(ch, map.getOrDefault(ch, 0)+1);
 		}
