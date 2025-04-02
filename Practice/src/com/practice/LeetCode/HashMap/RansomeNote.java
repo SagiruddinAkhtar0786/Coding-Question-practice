@@ -30,7 +30,7 @@ public class RansomeNote {
 }
 
 /*
- 
+ // second way
  
  class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
