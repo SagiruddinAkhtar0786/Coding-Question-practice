@@ -7,7 +7,7 @@ public class LongestSubstring {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String s = "abcabcss";
+		String s = "pwwkew";
 		HashMap<Character,Integer> map = new HashMap<>();
 		int left=0,maxLength=0,start=0;
 		String longestSubsttring="";
@@ -27,6 +27,8 @@ public class LongestSubstring {
 		}
 		
 		System.out.println(s.substring(start,start+maxLength));
+		System.out.println(maxLength);
+
 
 	}
 
