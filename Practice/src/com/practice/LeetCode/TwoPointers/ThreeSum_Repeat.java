@@ -47,3 +47,38 @@ public class ThreeSum_Repeat {
 	}
 
 }
+
+/*
+ * Time Complexity:
+Sorting takes → O(n log n)
+
+Main Loop (for i) runs → up to n times
+
+Inside, the two-pointer approach (while(left < right)) runs in O(n) for each i.
+
+So, the total is:
+
+scss
+Copy
+Edit
+O(n log n) + O(n^2)
+When n is large, O(n^2) dominates.
+
+✅ Final Time Complexity:
+👉 O(n²)
+*/
+
+
+/*
+ 🧠 Space Complexity:
+Sorting uses no extra space (in-place sort for arrays).
+
+Set to store unique triplets:
+
+In the worst case, you could have up to O(n²) triplets (but usually much fewer).
+
+Result List is built from the Set — so space depends on the number of triplets.
+
+✅ Final Space Complexity:
+👉 O(n²) (for the worst case storing many triplets)
+ */
