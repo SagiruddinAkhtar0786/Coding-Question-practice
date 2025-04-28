@@ -7,7 +7,7 @@ public class LongestSubstring_Repeat {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "sbcdeabcdefabs";
+		String s = "abcabcbb";
 		
 		String str =findLongestSubsstring(s);
 		System.out.println(" non repating characters :: "+str);
@@ -20,14 +20,14 @@ public class LongestSubstring_Repeat {
 		int start = 0;
 		int left = 0;
 		int maxLength = 0;
-		String substring = "";
+		//String substring = "";
 		
 		Map<Character,Integer> map = new HashMap<>();
 		for(int right = 0 ; right < s.length() ;right++) {
 			char ch = s.charAt(right);
 			
 			
-			if(map.containsKey(ch) && map.get(ch) >=left) {
+			if(map.containsKey(ch) && map.get(ch) >= left) {
 				left = map.get(ch)+1;
 			}
 			map.put(ch, right);
