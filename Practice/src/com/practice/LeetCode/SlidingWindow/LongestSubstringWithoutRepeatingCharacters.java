@@ -33,8 +33,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 			
 			set.add(str.charAt(high));
 			
-			
-			maxLength = Math.max(maxLength, high-low+1);
+			currentLength = high-low+1;
+			maxLength = Math.max(maxLength,currentLength );
 			high++;
 			
 		}
