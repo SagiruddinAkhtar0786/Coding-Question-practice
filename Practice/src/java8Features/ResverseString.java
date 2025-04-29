@@ -1,4 +1,4 @@
-package Java8Features;
+package java8Features;
 
 import java.util.Collections;
 import java.util.stream.Collectors;
