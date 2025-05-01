@@ -11,7 +11,24 @@ public class CheckpalinDrome {
 		int n = 1234321;
 		
 		checkPalindrome(n);
+		
+		//String str = "asdfgfdsak";
+		String str = "kasdfgfdsak";
+		checkPalindromeString(str);
 
+	}
+	private static void checkPalindromeString(String str) {
+		// TODO Auto-generated method stub
+		
+		String ModifyStr = IntStream.range(0,str.length())
+							.mapToObj(x -> str.charAt(str.length() - 1-x))
+							.peek(x-> System.out.print(x+" "))
+							.map(String :: valueOf)
+							.collect(Collectors.joining());
+		
+		System.out.println(str.equals(ModifyStr));
+
+		
 	}
 	private static void checkPalindrome(int num) {
 		String str = String.valueOf(num);
