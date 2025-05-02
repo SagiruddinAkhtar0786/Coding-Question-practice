@@ -29,6 +29,18 @@ public class CheckwhiteSpace {
 						.collect(Collectors.joining());
 		
 		System.out.println(sb1);
+		
+		StringBuilder sb2 = new StringBuilder();
+		
+		String ModifiedString = str.trim()
+				.chars()  // return unicode values for every Charcter
+				.filter(x -> !Character.isWhitespace(x)) // Checks for that unicode there is any whitespace
+				.mapToObj(x -> (char)x) // converts again all unicode back to character
+				.map(x -> String.valueOf(x)) //maps to string each charcter
+				//.map(String :: valueof)
+				.collect(Collectors.joining()); // joins all char string to one after another
+		
+		System.out.println("ModifiedString >> "+ModifiedString);
 						
 			
 
