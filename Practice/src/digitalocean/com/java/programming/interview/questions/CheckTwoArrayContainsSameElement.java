@@ -56,9 +56,7 @@ public class CheckTwoArrayContainsSameElement {
 		Set<Integer> set2 = new HashSet<Integer>();
 
 		
-		if(set1.size() != set2.size()) {
-			return false;
-		}
+		
 		/*
 		 * ✔ Using HashSet removes duplicates automatically.
 		 *  ✔ Set comparison (.equals()) ensures both arrays contain the same unique elements. 
@@ -68,6 +66,10 @@ public class CheckTwoArrayContainsSameElement {
 			set1.add(i);
 		for (int i : arr2)
 			set2.add(i);
+		
+		if(set1.size() != set2.size()) {
+			return false;
+		}
 
 		return set1.equals(set2);
 	}
