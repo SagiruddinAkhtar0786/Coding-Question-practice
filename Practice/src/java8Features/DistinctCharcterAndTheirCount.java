@@ -18,7 +18,7 @@ public class DistinctCharcterAndTheirCount {
 	}
 
 	private static void charcterCountUsingJava8(String str) {
-		Map<Character, Long> charCount = str.chars() // convert string to intStream
+		Map<Character, Long> charCount = str.chars() // convert string to intStream which return unicode
 				.mapToObj(ch -> (char) ch) // Converts each ASCII value into a Character object.
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		// groupingBy(Function.identity()) → Groups by the character itself.
