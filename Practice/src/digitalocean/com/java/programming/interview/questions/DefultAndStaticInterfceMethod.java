@@ -31,5 +31,6 @@ public class DefultAndStaticInterfceMethod implements useOfDefaultAndStaticMetho
 		overrirdeMethod oM = new overrirdeMethod();
 		oM.usedefaultMehod2();
 	}
+	
 
 }
