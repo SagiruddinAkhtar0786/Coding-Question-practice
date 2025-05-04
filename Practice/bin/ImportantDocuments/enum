@@ -33,3 +33,10 @@ public class Enum_Question {
 	}
 
 }
+
+🔸 Internally:
+Each enum constant is public, static, and final.
+
+enum implicitly extends java.lang.Enum and cannot extend other classes.
+
+You can define constructors, fields, and methods inside an enum.
