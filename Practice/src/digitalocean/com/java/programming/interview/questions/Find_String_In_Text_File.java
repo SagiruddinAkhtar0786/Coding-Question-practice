@@ -25,7 +25,7 @@ public class Find_String_In_Text_File {
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		String str = "sagiruddin";
-		String filePath = "D:\\shabnam\\TestingFile.txt";
+		String filePath = "D:\\Sagir\\TestingFile.txt";
 		boolean result =findStringFromFile(str,filePath);
 		
 		if(result) {
