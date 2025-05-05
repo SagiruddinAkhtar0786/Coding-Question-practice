@@ -15,12 +15,60 @@ public class DistinctCharcterAndTheirCount {
 		System.out.println("=======charcterCountUsingJava8 ========");
 
 		charcterCountUsingJava8(str);
-		charcterCountUsingJava8try(str);
+		
+		int arr[] = {1,2,3,4,5,1,2,62,2,4};
+		charcterCountUsingJava8try(arr);
+		
+		
+		int num = 121112345;
+		charcterCountUsingJava8tryInt(num);
+
+		
+		
 
 	}
 
-	private static void charcterCountUsingJava8try(String str) {
+	private static void charcterCountUsingJava8tryInt(int num) {
+		
+		String str = String.valueOf(num);
+		
+		Map<Character,Long> charCount = str.chars()
+										.mapToObj(x -> (char)x)
+										.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		System.out.println(charCount);
+	}
+
+	private static void charcterCountUsingJava8try(int[] arr) {
 		// TODO Auto-generated method stub
+		
+		Map<Integer,Long> intCount = Arrays.stream(arr) // returns IntStream
+									.boxed() // converts to Stream<Integer>
+									.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		System.out.println(intCount);
+		
+		/*
+		 Map<Integer,Long> intCount = Arrays.stream(arr) // returns IntStream
+									.boxed() // converts to Stream<Integer>
+									.collect(Collectors.groupingBy(Function.identity(),LinkedHashMap :: new ,Collectors.counting()));
+		
+		System.out.println(intCount);
+		
+		
+		
+		 Map<Integer, Long> frequencyMap = IntStream.of(arr) // creates an IntStream from int[]
+            .boxed() // converts IntStream to Stream<Integer>
+            .collect(Collectors.groupingBy(
+                Function.identity(), // group by the number itself
+                Collectors.counting() // count how many times each number appears
+            ));
+
+        System.out.println(frequencyMap);
+		 */
+		
+		
+		 
 		
 		
 		
