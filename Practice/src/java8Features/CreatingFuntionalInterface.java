@@ -2,10 +2,8 @@ package java8Features;
 
 
 @FunctionalInterface
-interface I{
+interface I1{
 	void display();
-
-	void withdraw();
 }
 public class CreatingFuntionalInterface {
 
