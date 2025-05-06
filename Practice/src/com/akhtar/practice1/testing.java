@@ -27,6 +27,19 @@ public class testing {
 		//convert array to list
 		
 		String [] str = {"sagir", "salim","raju","rajnish"};
+		int [] intArr = {1,2,3,4,5};
+		
+	//	List<Integer> lint = new ArrayList<>(Arrays.asList(intArr));
+		
+		
+		int arr1 [] = new int[] {2,3,4,5,6};
+		List<Integer> lint1 = new ArrayList<>();
+
+		
+		for(int i : arr1)
+			lint1.add(i);
+		
+		System.out.println("lint  : "+lint1);
 		
 		
 		List<String> lst1 = new ArrayList<String>(Arrays.asList(str));
