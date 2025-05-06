@@ -16,10 +16,11 @@ public class testing {
 		String s1 = "Sagir";
 		String s2 = new String("Sagir");
 		String s3 = new String("Sagir");
-		System.out.println(s1.equals(s2));
+		System.out.println("a : "+s1.equals(s2));
 		System.out.println(s1== s2);
-		System.out.println(s3.equals(s2));
+		System.out.println("a : "+s3.equals(s2));
 		System.out.println(s3 == s2);
+		System.out.println(s1 == s2.intern());
 		
 		
 		//***********************************************************
