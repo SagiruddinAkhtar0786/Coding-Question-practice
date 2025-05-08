@@ -25,6 +25,7 @@ class Person implements Serializable {
 public class SerializationExample {
     public static void main(String[] args) {
         Person person = new Person("John Doe", 30);
+        System.out.println("Current working directory: " + System.getProperty("user.dir"));
 
         // Serialize the object
         try (FileOutputStream fileOut = new FileOutputStream("person.ser");
