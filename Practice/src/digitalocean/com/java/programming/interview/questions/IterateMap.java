@@ -19,6 +19,15 @@ public class IterateMap {
 		for(Entry<Integer,String> ele : entry) {
 			System.out.println(ele.getKey() +" : "+ele.getValue());
 		}
+		
+		for(Map.Entry<Integer, String> entry1 : map.entrySet())
+			System.out.println(entry1.getKey() +" : "+entry1.getValue());
+		
+		 for (Map.Entry<Integer, String> entry2 : map.entrySet()) {
+	            System.out.println("Key: " + entry2.getKey() + ", Value: " + entry2.getValue());
+	        }
+
+			
 
 	}
 
