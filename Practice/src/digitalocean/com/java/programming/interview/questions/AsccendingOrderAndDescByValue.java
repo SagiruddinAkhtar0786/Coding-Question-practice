@@ -2,10 +2,10 @@ package digitalocean.com.java.programming.interview.questions;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class AsccendingOrderAndDescByValue {
@@ -35,10 +35,39 @@ public class AsccendingOrderAndDescByValue {
 	 
 	 System.out.println("asccending in Values");
 	 
-	 List<Entry<Integer,String>> entryList = new ArrayList<>(map.entrySet());
+	// List<Entry<Integer,String>> entryList = new ArrayList<>(map.entrySet());
+	// System.out.println(entryList);
+	 List<Map.Entry<Integer,String>> entryList = new ArrayList<>(map.entrySet());
 	 System.out.println(entryList);
-	 List<Map.Entry<Integer,String>> entryListMap = new ArrayList<>(map.entrySet());
-	 System.out.println(entryListMap);
+	 
+	 
+
+
+     // Ascending order by value
+     Collections.sort(entryList, new Comparator<Map.Entry<Integer, String>>() {
+         @Override
+         public int compare(Map.Entry<Integer, String> e1, Map.Entry<Integer, String> e2) {
+             return e1.getValue().compareTo(e2.getValue());
+         }
+     });
+
+     System.out.println("Sorted in Ascending Order by Value:");
+     for (Map.Entry<Integer, String> entry : entryList) {
+         System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+     }
+
+     // Descending order by value
+     Collections.sort(entryList, new Comparator<Map.Entry<Integer, String>>() {
+         @Override
+         public int compare(Map.Entry<Integer, String> e1, Map.Entry<Integer, String> e2) {
+             return e2.getValue().compareTo(e1.getValue());
+         }
+     });
+
+     System.out.println("\nSorted in Descending Order by Value:");
+     for (Map.Entry<Integer, String> entry : entryList) {
+         System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+     }
 
 	}
 
