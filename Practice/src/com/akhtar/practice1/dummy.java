@@ -32,5 +32,14 @@ public class dummy {
 		 * useful if you have to search, update or delete elements on the basis of a
 		 * key.
 		 */
+		
+		/*
+		 Java HashMap contains values based on the key.
+ Java HashMap contains only unique keys.
+ Java HashMap may have one null key and multiple null values.
+ Java HashMap is non synchronized.
+ Java HashMap maintains no order.
+ The initial default capacity of Java HashMap class is 16 with a load factor of 0.75
+		 */
 	}
 }
