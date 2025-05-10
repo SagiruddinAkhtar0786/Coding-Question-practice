@@ -41,5 +41,61 @@ public class dummy {
  Java HashMap maintains no order.
  The initial default capacity of Java HashMap class is 16 with a load factor of 0.75
 		 */
+		
+		/* HashMap is like a data structure that stores data in key-value pairs. 
+		Internally, it uses an array of buckets, where each bucket holds entries (nodes).
+		Each node contains a key, its value, the hash of the key, 
+		and a pointer to the next node (in case of collisions).
+
+		🟩 Step-by-step: How HashMap Stores Data
+		When you use:
+
+		
+		map.put("abc", 123);
+		Java calls "abc".hashCode() to generate a hash number.
+
+		It calculates the bucket index using this hash:
+			index = (n - 1) & hash;
+		where n is the current size of the array (default is 16).
+
+		If the bucket at index is empty:
+
+		It creates a new node and puts it there.
+
+		If the bucket already has something (hash collision):
+
+		It checks if the key already exists using .equals().
+
+		If yes, it updates the value.
+
+		If no, it adds the new node at the end of the linked list in that bucket.
+
+		If more than 8 nodes exist in one bucket → it converts the list to a Red-Black Tree for faster search.
+		
+		How HashMap Retrieves Data
+		When you use:
+
+		map.get("abc");
+		HashMap calculates the hash and index again using the same method.
+
+		Goes to that bucket and:
+
+		If one node exists, checks the key using .equals() and returns the value.
+
+		If a list/tree exists, it searches each node or tree node using .equals() to find the key.*/
+		
+		/* Java LinkedHashMap contains values based on the key.
+		 Java LinkedHashMap contains unique elements.
+		 Java LinkedHashMap may have one null key and multiple null values.
+		 Java LinkedHashMap is non synchronized.
+		 Java LinkedHashMap maintains insertion order.
+		 The initial default capacity of Java HashMap class is 16 with a load factor of 0.75*/
+		
+		/*Java TreeMap contains values based on the key. It implements the NavigableMap 
+		interface and extends AbstractMap class.
+		 Java TreeMap contains only unique elements.
+		 Java TreeMap cannot have a null key but can have multiple null values.
+		 Java TreeMap is non synchronized.
+		Java TreeMap maintains ascending order.*/
 	}
 }
