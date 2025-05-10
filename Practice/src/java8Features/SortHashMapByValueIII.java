@@ -1,4 +1,4 @@
-package digitalocean.com.java.programming.interview.questions;
+package java8Features;
 
 import java.util.Comparator;
 import java.util.HashMap;

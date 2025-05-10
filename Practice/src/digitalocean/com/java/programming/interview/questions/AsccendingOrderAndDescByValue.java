@@ -1,10 +1,9 @@
 package digitalocean.com.java.programming.interview.questions;
 
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.TreeMap;
 
 public class AsccendingOrderAndDescByValue {
 
@@ -12,64 +11,26 @@ public class AsccendingOrderAndDescByValue {
 		// TODO Auto-generated method stub
 	 Map<Integer,String> map = new HashMap<>();
 	 
+	 map.put(3, "sunny");
 	 map.put(1, "sagir");
 	 map.put(2, "rahul");
-	 map.put(3, "sunny");
+	
 	 map.put(4, "irfan");
 	 map.put(4, "samo");  // we cacn not have the duplicate key but can have the dublicacte value
 	 
-	 Map<Integer,String> comByVal = map
-			 .entrySet()
-			 .stream()
-			 .sorted(Map.Entry.comparingByValue())
-			 .collect(Collectors.toMap(Map.Entry :: getKey, Map.Entry :: getValue ,(oldv,newv)->oldv,LinkedHashMap :: new));
+	 System.out.println("asccending in Keys");
+	 Map<Integer,String> treeMap = new TreeMap<>(map);
 	 
-	 comByVal.forEach((k,v )-> System.out.println(k +" : "+v));
-	 System.out.println("************************************************************");
+	 for(Map.Entry<Integer, String> entry : treeMap.entrySet())
+		 System.out.println(entry.getKey() +" : "+entry.getValue());
 	 
-	 // normal get key and get value
-	  Map<Integer,String> comByValM = map
-			 .entrySet()
-			 .stream()
-			 .sorted(Map.Entry.comparingByValue())
-			 .collect(Collectors.toMap(
-					 entry -> entry.getKey(),
-					 entry -> entry.getValue(),
-					 (oldValue,newValue) -> oldValue,
-					 () -> new LinkedHashMap<>())
-					 );
+	 System.out.println("Descending  in Keys");
+	 Map<Integer,String> revtree = new TreeMap<>(Collections.reverseOrder());
+	 revtree.putAll(map);
 	 
-	 comByValM.forEach((k,v )-> System.out.println(k +" : "+v));
-	 System.out.println("************************************************************");
-
+	 System.out.println(revtree);
 	 
-	 // normal get key and get value
-	  Map<Integer,String> comByValreverese = map
-			 .entrySet()
-			 .stream()
-			 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-			 .collect(Collectors.toMap(
-					 entry -> entry.getKey(),
-					 entry -> entry.getValue(),
-					 (oldValue,newValue) -> oldValue,
-					 () -> new LinkedHashMap<>())
-					 );
-	 
-	  comByValreverese.forEach((k,v )-> System.out.println(k +" : "+v));
-	  
-		 System.out.println("************************************************************");
-
-	 
-	 map
-	 .entrySet()
-	 .stream()
-	 .sorted(Map.Entry.comparingByValue()).forEach(entry -> System.out.println(entry.getKey() + " : "+ entry.getValue()));
-		 
-		 System.out.println("************************************************************");
-
-	  
-	 
-	 
+	 System.out.println("asccending in Values");
 
 	}
 
