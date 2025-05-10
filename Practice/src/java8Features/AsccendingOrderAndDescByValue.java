@@ -70,7 +70,28 @@ public class AsccendingOrderAndDescByValue {
 		 System.out.println("************************************************************");
 
 	  
-	 
+		 Map<String,Integer> emp = new HashMap<String,Integer>();
+			emp.put("sagir", 28);
+			emp.put("salim", 20);
+			emp.put("raju", 12);
+			emp.put("rahim", 54);
+			emp.put("rajesh", 90);
+			
+			System.out.println("employee list :: "+emp);
+			
+			
+			Map<String,Integer> sortMap = emp.entrySet()
+					.stream()
+					.sorted(Map.Entry.comparingByValue())
+					.collect(Collectors.toMap(entry -> entry.getKey(), entry->entry.getValue(),(oldv,newv) -> oldv,LinkedHashMap :: new));
+		sortMap.forEach((k,v) -> System.out.println(k +" : "+v));
+		
+		System.out.println("************************************************************");
+		Map<String,Integer> sortMapKeys = emp.entrySet()
+				.stream()
+				.sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.toMap(entry -> entry.getKey(), entry->entry.getValue(),(oldv,newv) -> oldv,LinkedHashMap :: new));
+		sortMapKeys.forEach((k,v) -> System.out.println(k +" : "+v));
 	 
 
 	}

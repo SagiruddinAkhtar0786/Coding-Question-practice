@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class SortHashMapByValue {
 
@@ -30,6 +31,7 @@ public class SortHashMapByValue {
 		for(int i = 0 ; i <entryList.size()-1 ; i++) {
 			//System.out.println("entryList.get(i) >> "+entryList.get(i)+" : "+i);
 			for(int j = i+1 ; j < entryList.size() ; j++) {
+				System.out.println(entryList);
 				if(entryList.get(i).getValue() > entryList.get(j).getValue()) {
 					Map.Entry<String, Integer> temp = entryList.get(i); 
 					entryList.set(i, entryList.get(j));
@@ -37,7 +39,10 @@ public class SortHashMapByValue {
 				}
 			}
 		}
-		System.out.println("entryList >> "+entryList);
+		System.out.println("entryList llop >> "+entryList);
+		
+		
+		
 		
 		Map<String,Integer> sortedMap = new LinkedHashMap<String,Integer>();
 		

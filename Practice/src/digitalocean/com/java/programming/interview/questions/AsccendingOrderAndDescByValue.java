@@ -1,8 +1,11 @@
 package digitalocean.com.java.programming.interview.questions;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class AsccendingOrderAndDescByValue {
@@ -31,6 +34,11 @@ public class AsccendingOrderAndDescByValue {
 	 System.out.println(revtree);
 	 
 	 System.out.println("asccending in Values");
+	 
+	 List<Entry<Integer,String>> entryList = new ArrayList<>(map.entrySet());
+	 System.out.println(entryList);
+	 List<Map.Entry<Integer,String>> entryListMap = new ArrayList<>(map.entrySet());
+	 System.out.println(entryListMap);
 
 	}
 
