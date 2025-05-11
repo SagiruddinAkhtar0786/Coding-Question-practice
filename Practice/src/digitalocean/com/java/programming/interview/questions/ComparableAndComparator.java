@@ -101,7 +101,7 @@ public class ComparableAndComparator {
 		empArr[3] = new Employee(3, "sagir4", 2341.70);
 
 		Arrays.sort(empArr); // compile time error
-		empArr.toString();
+		//empArr.toString();
 		System.out.println(Arrays.toString(empArr));
 		// Employee em = new Employee();
 
@@ -111,6 +111,10 @@ public class ComparableAndComparator {
 		System.out.println("Employees list sorted by Salary:\n"+Arrays.toString(empArr));
 		Arrays.sort(empArr,Employee.idComparator);
 		System.out.println("Employees list sorted by Salary:\n"+Arrays.toString(empArr));
+		
+		for(Employee st:empArr){  
+			System.out.println(st.id+" "+st.name+" "+st.salary);  
+			}
 		
 
 	}
