@@ -11,8 +11,6 @@ class Employee implements Comparable<Employee> {
 	public Employee() {
 
 	}
-
-	
 	
 	public int getId() {
 		return id;
