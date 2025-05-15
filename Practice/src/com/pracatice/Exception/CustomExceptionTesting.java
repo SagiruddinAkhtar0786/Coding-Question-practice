@@ -17,7 +17,10 @@ public class CustomExceptionTesting {
 		// TODO Auto-generated method stub
 		
 	
-			int result = 10/0;
+			//int result = 10/0;
+		
+		int arr[] = new int[2];
+		arr[2]=10;
 			//throw new ArithmeticException();
 			throw new generateException("This is user Defined Exception ");
 			
