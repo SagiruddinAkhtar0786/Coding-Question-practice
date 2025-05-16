@@ -1,9 +1,11 @@
 package java8Features;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DistinctCharcterAndTheirCount {
 
@@ -21,10 +23,7 @@ public class DistinctCharcterAndTheirCount {
 		
 		
 		int num = 121112345;
-		charcterCountUsingJava8tryInt(num);
-
-		
-		
+		charcterCountUsingJava8tryInt(num);		
 
 	}
 
@@ -33,7 +32,7 @@ public class DistinctCharcterAndTheirCount {
 		String str = String.valueOf(num);
 		
 		Map<Character,Long> charCount = str.chars()
-										.mapToObj(x -> (char)x)
+										.mapToObj(x -> (char)x) 
 										.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 		System.out.println(charCount);
@@ -43,17 +42,19 @@ public class DistinctCharcterAndTheirCount {
 		// TODO Auto-generated method stub
 		
 		Map<Integer,Long> intCount = Arrays.stream(arr) // returns IntStream
-									.boxed() // converts to Stream<Integer>
+									//.boxed() // converts to Stream<Integer>
+								//	.mapToObj(x ->x)
+								.mapToObj(Integer :: valueOf)
 									.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
-		System.out.println(intCount);
+		System.out.println("int count "+intCount);
 		
-		/*
-		 Map<Integer,Long> intCount = Arrays.stream(arr) // returns IntStream
+		
+		 Map<Integer,Long> intCountLinkedHashMap = Arrays.stream(arr) // returns IntStream
 									.boxed() // converts to Stream<Integer>
 									.collect(Collectors.groupingBy(Function.identity(),LinkedHashMap :: new ,Collectors.counting()));
 		
-		System.out.println(intCount);
+		System.out.println("intCountLinkedHashMap >> "+intCountLinkedHashMap);
 		
 		
 		
@@ -65,7 +66,7 @@ public class DistinctCharcterAndTheirCount {
             ));
 
         System.out.println(frequencyMap);
-		 */
+		 
 		
 		
 		 
