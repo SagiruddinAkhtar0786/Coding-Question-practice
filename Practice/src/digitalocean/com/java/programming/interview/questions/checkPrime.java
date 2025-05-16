@@ -32,7 +32,7 @@ public class checkPrime {
 			return true;
 		}
 		
-		for(int i = 2;i<=n/2;i++) {
+		for(int i = 2;i<= Math.sqrt(n);i++) { // i <= n/2
 			if(n %i ==0)
 				return false;
 		}
@@ -49,7 +49,7 @@ public class checkPrime {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 2;
+		int n = 101;
 		System.out.println("++++++++++++++++++++++++++");
 		System.out.println("find Prime using Normal Void Return Type");
 		System.out.println("++++++++++++++++++++++++++");
@@ -61,9 +61,9 @@ public class checkPrime {
 
 		boolean b = checkPrime(n);
 		if(b)
-			System.out.println("prime number");
+			System.out.println(" ....prime number");
 		else
-			System.out.println("Not a prime");
+			System.out.println(".... Not a prime");
 		
 		System.out.println("++++++++++++++++++++++++++");
 
