@@ -15,15 +15,23 @@ public class ConvertArrayToList {
 
 		//List<Integer> lint = new ArrayList<>(Arrays.asList(intArr));
 		
-		List<Integer> lst = Arrays.stream(intArr).boxed().collect(Collectors.toList());
+		List<Integer> lst = Arrays.stream(intArr)
+				//.boxed()
+				.mapToObj(x->x)
+				.collect(Collectors.toList());
 		System.out.println("int to list :: "+lst);
-		
-		//List<Integer> stremOf = Stream.of(intArr)	.mapToObj(i -> i).collect(Collectors.toList());
-		
+
+
+		//So Stream.of(intArr) returns a Stream of int[] (i.e., Stream<int[]>), not a Stream of integers.
+		//List<Integer> stremOf = Stream.of(intArr).mapToObj(i -> i).collect(Collectors.toList());
+	
 		List<Integer> lint = IntStream.of(intArr)  // or Arrays.stream(intArr)
-                .mapToObj(Integer::valueOf)
+                //.mapToObj(Integer::valueOf)
+				.mapToObj(x -> Integer.valueOf(x))
+				//.mapToObj(x->x)  
+				//.boxed()
                 .collect(Collectors.toList());
-		System.out.println(lint);
+		System.out.println("lint :: "+lint);
 		
 		
 		List<Integer> lint1 = IntStream.of(intArr)
