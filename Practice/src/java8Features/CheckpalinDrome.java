@@ -43,7 +43,7 @@ public class CheckpalinDrome {
 							.collect(Collectors.joining());*/
 		
 		String ModifiedStr = IntStream.range(0, str.length())
-				.mapToObj(i -> str.charAt(str.length()  - 1 - i))
+				.mapToObj(i -> str.charAt(str.length() - 1 - i))
 				.map(String :: valueOf)
 				.collect(Collectors.joining());
 		
