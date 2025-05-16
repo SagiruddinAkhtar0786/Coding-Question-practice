@@ -51,6 +51,9 @@ public class testing {
 			lst.add(s);
 		
 		System.out.println(lst);
+		System.out.println("result");
+		int n = 5;
+		System.out.println(n++ + n++ + ++n );
 	}
 
 }
