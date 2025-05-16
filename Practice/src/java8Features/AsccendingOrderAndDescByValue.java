@@ -59,6 +59,7 @@ public class AsccendingOrderAndDescByValue {
 	 
 	  comByValreverese.forEach((k,v )-> System.out.println(k +" : "+v));
 	  
+	  comByValreverese.forEach((k,v) -> System.out.println(k+": "+v));
 		 System.out.println("************************************************************");
 
 	 
