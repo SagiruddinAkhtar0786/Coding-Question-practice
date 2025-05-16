@@ -3,6 +3,7 @@ package com.akhtar.practice1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class testing {
 
@@ -54,6 +55,11 @@ public class testing {
 		System.out.println("result");
 		int n = 5;
 		System.out.println(n++ + n++ + ++n );
+		
+		int k = 11;
+		
+		boolean check = k > 2 && IntStream.range(3, (int)Math.sqrt(k)).noneMatch(x -> k%x == 0);
+		System.out.println(check);
 	}
 
 }
