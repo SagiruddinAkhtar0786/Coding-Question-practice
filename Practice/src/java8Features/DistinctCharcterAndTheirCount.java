@@ -1,8 +1,11 @@
 package java8Features;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -13,6 +16,27 @@ public class DistinctCharcterAndTheirCount {
 		// TODO Auto-generated method stub
 
 		String str = "asdfgASDFGasdfg";
+		Map<Character,Integer> mp = new HashMap<Character,Integer>();
+		
+		for(char c : str.toCharArray())
+			mp.put(c, mp.getOrDefault(c, 0)+1);
+		
+		System.out.println("count freq :: "+mp);
+
+		Map<Character,Integer> dup = new HashMap<Character,Integer>();
+		Set<Character>set = new HashSet<>();
+		for(char c : str.toCharArray())
+		{
+			if(dup.containsKey(c)) {
+				set.add(c);
+				dup.put(c, dup.getOrDefault(c,0)+1);
+			}
+			else
+				dup.put(c, 1);
+		}
+		
+		System.out.println("count freq dup :: "+dup);
+		System.out.println("getting duplicate :: "+set);
 
 		System.out.println("=======charcterCountUsingJava8 ========");
 
