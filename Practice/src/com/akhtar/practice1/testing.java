@@ -60,6 +60,18 @@ public class testing {
 		
 		boolean check = k > 2 && IntStream.range(3, (int)Math.sqrt(k)).noneMatch(x -> k%x == 0);
 		System.out.println(check);
+		
+		String strr = "sagir";
+		boolean chk = strr.chars().mapToObj(x -> (char)x).anyMatch(c -> "aeiou".indexOf(c) != -1);
+		System.out.println("it contains vowels");
+		
+		boolean chk2 = strr.chars().mapToObj(x-> (char)x).noneMatch(c-> "aeiou".indexOf(c) != -1);
+		if(!chk2) {
+			System.out.println("contains vowel");
+		}		
+		else {
+			System.out.println("does not contain vowel");
+		}
 	}
 
 }

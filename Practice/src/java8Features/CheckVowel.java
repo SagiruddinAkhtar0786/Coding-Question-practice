@@ -15,10 +15,10 @@ public class CheckVowel {
 		
 		System.out.println(chk);
 		System.out.println("*************************************************************************");
-		String s = "dfgr";
+		String s = "dfgara";
 		int index = IntStream.range(0, s.length())
 				.filter(i -> "aeiou".indexOf(s.charAt(i)) != -1)
-				.peek(x -> System.out.println(x))
+				.peek(x -> System.out.println(x+" for check ..."))
 				.findFirst() // return first vowel match
 				.orElse(-1); // if no vowel return -1
 		if(index == -1) {
@@ -26,6 +26,16 @@ public class CheckVowel {
 		}
 		else
 			System.out.println("Found Matches at index "+index);
+		
+		
+		String strr= "sagir";
+		boolean chk2 = strr.chars().mapToObj(x-> (char)x).noneMatch(c-> "aeiou".indexOf(c) != -1);
+		if(!chk2) {
+			System.out.println("contains vowel");
+		}		
+		else {
+			System.out.println("does not contain vowel");
+		}
 	}
 
 }
