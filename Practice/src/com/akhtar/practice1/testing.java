@@ -72,6 +72,19 @@ public class testing {
 		else {
 			System.out.println("does not contain vowel");
 		}
+		
+		String ss ="sag iruddin akhtar";
+		boolean test = ss.chars()
+				.mapToObj(x -> (char)x)
+				.anyMatch(x -> " ".indexOf(x) != -1);
+		if(test)
+		System.out.println("yes whiteSpace is there");
+		
+		int index = IntStream.range(0, ss.length())
+				.filter(x -> " ".indexOf(ss.charAt(x)) != -1)
+				.findFirst().orElse(-1);
+		System.out.println("space index at "+index);
+				
 	}
 
 }
