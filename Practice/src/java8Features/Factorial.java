@@ -11,14 +11,14 @@ public class Factorial {
 		
 		int result = IntStream.rangeClosed(1, n)
 					.reduce(1, (a,b) -> a*b);
+		System.out.println( "factorial :: "+result);
 		
-		System.out.println(result);
 		
 		int a = 9, b = 7,c = 3;
 		
 		int sum = IntStream.of(a,b,c).reduce(0, (x,y) -> x+y);
 		
-		System.out.println(sum);
+		System.out.println("sum of digits :: "+sum);
 
 	}
 
