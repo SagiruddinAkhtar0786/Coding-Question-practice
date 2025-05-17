@@ -95,6 +95,15 @@ public class testing {
 				.map(String :: valueOf)
 				.collect(Collectors.joining());
 		System.out.println("reversed String :: "+revString);
+		
+		String re = IntStream.range(0, revStr.length())
+				.map(i -> revStr.charAt(revStr.length()-1-i)) // return only ascii value
+				.peek(x->System.out.println("str ot char "+x))
+				.mapToObj(x -> (char)x)
+				.map(x -> String.valueOf(x))
+				.collect(Collectors.joining());
+		
+		System.out.println("reverse again with diff method :: "+re);
 				
 	}
 
