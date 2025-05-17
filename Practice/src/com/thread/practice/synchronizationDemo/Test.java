@@ -16,7 +16,7 @@ class callThread implements Runnable{
 	
 	@Override
 	public void run() {
-		System.out.println("seat : : "+seat);
+		System.out.println("try to book seat : : "+seat);
 		BTS.bookSeat(seat);
 	}
 }

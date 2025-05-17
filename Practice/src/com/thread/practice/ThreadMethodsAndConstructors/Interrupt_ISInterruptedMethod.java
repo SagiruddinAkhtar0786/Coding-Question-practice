@@ -20,7 +20,7 @@ class interruptUsee implements Runnable{
 	public void run() {
 		
 		System.out.println(Thread.currentThread().isInterrupted());
-		System.out.println("A : "+Thread.interrupted());
+		//System.out.println("A : "+Thread.interrupted());
 		try {
 		for(int i = 0 ; i < 5;i++) {
 			
@@ -32,7 +32,7 @@ class interruptUsee implements Runnable{
 
 			}
 		}catch(InterruptedException e) {
-				e.printStackTrace();
+			//	e.printStackTrace();
 				System.out.println("Interrrupted Exceptions due to interruption>> "+e.getMessage());
 			}
 		

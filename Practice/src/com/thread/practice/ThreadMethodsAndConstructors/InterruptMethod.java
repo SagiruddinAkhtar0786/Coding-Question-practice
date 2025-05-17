@@ -38,7 +38,7 @@ class ThreadRunningnormally implements Runnable{
 		for(int i = 0 ; i < 5 ;i++) {
 			if(Thread.currentThread().isInterrupted()) {
 				
-				System.out.println("Thread is interrupted... >> ");
+				System.out.println("Thread is interrupted >> ");
 				return; // stops execution manually after checking thread interruption
 			}
 			/*
@@ -60,9 +60,10 @@ public class InterruptMethod {
 		th.interrupt();
 		
 		
-		Thread thn = new Thread(new ThreadRunningnormally());
-		thn.start();
-		thn.interrupt();
+		/*
+		 * Thread thn = new Thread(new ThreadRunningnormally()); thn.start();
+		 * thn.interrupt();
+		 */
 		
 
 
