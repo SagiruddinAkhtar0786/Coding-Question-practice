@@ -3,6 +3,7 @@ package com.akhtar.practice1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class testing {
@@ -84,6 +85,16 @@ public class testing {
 				.filter(x -> " ".indexOf(ss.charAt(x)) != -1)
 				.findFirst().orElse(-1);
 		System.out.println("space index at "+index);
+		
+		//reverse String
+		
+		String ModFi  ="  sagiruddin  ";
+		String revStr = ModFi.trim();
+		String revString = IntStream.range(0, revStr.length())
+				.mapToObj(i -> revStr.charAt(revStr.length()-1-i))
+				.map(String :: valueOf)
+				.collect(Collectors.joining());
+		System.out.println("reversed String :: "+revString);
 				
 	}
 
