@@ -2,8 +2,6 @@ package com.akhtar.practice1;
 
 public class dummy {
 	public static void main(String[] args) {
-		
-		
 		/*Java LinkedList class can contain duplicate elements.
 		Java LinkedList class maintains insertion order.
 		Java LinkedList class is non synchronized.
