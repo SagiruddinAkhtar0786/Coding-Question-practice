@@ -32,7 +32,7 @@ public class WaitNotifyNotifyAllSolution {
 			}
 		}
 		
-		System.out.println("total earning after wait nad notify :: "+TE.total+"Rs");
+		System.out.println("total earning after wait nad notify :: "+TE.total+" Rs.");
 	}
 
 }
