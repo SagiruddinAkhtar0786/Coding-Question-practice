@@ -8,7 +8,6 @@ public class BestTimeToBuyAndSellStock {
 		int maxProfit = maxProfit(prices);
 		
 		System.out.println("maxProfit >> "+maxProfit);
-
 	}
 
 	private static int maxProfit(int[] prices) {
