@@ -29,7 +29,6 @@ public class RemoveDuplicates_26_SortedArrays {
 				nums[++j] = nums[i];
 			}
 		}
-		
 		System.out.println(Arrays.toString(nums));
 		return j+1;
 	}
