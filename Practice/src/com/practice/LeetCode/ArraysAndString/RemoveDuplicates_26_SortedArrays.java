@@ -18,7 +18,8 @@ public class RemoveDuplicates_26_SortedArrays {
 		
 		
 	}
-
+//123345
+	//11123
 	private static int removeDublicates1(int[] nums) {
 		// TODO Auto-generated method stub
 		int count = 0;
