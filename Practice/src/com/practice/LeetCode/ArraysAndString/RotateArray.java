@@ -19,6 +19,8 @@ public class RotateArray {
 	private static void rotateArrayByStep(int[] arr, int k) {
 		// TODO Auto-generated method stub
 		int start = 0, end = arr.length-1;
+		k = k  % arr.length;  // for condition nums = [-1] k =2 now k = will be 1 for this condition
+
 		
 		rotatestepWise(arr,start,end);
 		rotatestepWise(arr,start,k-1);
