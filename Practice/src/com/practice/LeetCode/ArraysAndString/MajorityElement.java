@@ -46,7 +46,6 @@ public class MajorityElement {
 		// TODO Auto-generated method stub
 		int count = 0;
 		int cand = 0;
-
 		for (int i = 0; i < arr.length; i++) {
 			if (count == 0)
 				cand = arr[i];
