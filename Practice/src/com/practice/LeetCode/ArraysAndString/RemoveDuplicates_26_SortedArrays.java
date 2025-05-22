@@ -25,8 +25,6 @@ public class RemoveDuplicates_26_SortedArrays {
 //123345
 	//11123
 	private static int removeDublicates1(int[] nums) {
-		// TODO Auto-generated method stub
-		int count = 0;
 		int j = 0;
 		for(int i = 1 ; i<nums.length ; i++) {
 			if(nums[i] != nums[j]) {				
