@@ -37,3 +37,26 @@ public class Gas_Station {
 	}
 
 }
+
+
+/*
+class Solution {
+public int canCompleteCircuit(int[] gas, int[] cost) {
+    int diff = 0,  rest = 0, index = 0;
+
+    for(int i = 0 ; i < gas.length; i++){
+        diff += gas[i] - cost[i];
+        rest += gas[i] - cost[i];
+
+        if(rest < 0){
+            rest = 0;
+            index = i+1;
+        }
+
+    }
+        if(diff < 0 || index >= gas.length) return -1;
+
+    return index;
+    
+}
+}*/
