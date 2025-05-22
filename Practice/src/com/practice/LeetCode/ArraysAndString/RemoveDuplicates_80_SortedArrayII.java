@@ -25,7 +25,6 @@ public class RemoveDuplicates_80_SortedArrayII {
 				arr[j++] = n;
 			}
 		}
-		
 		return j;
 	}
 
