@@ -1,5 +1,9 @@
 package com.practice.LeetCode.ArraysAndString;
-
+/*
+ Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+ */
 public class JumpGame {
 
 	public static void main(String[] args) {
@@ -19,6 +23,8 @@ public class JumpGame {
 		int reach = 0;
 		for (int i = 0; i <= reach; i++) {
 			reach = Math.max(reach, i + arr[i]);
+			System.out.println("reach >> "+reach);
+			
 			if (reach >= arr.length-1) {
 				return true;
 			}
