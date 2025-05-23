@@ -9,9 +9,9 @@ public class ProductOfArrayExceptSelf {
 		int nums[] = new int[] {1,2,3,4}; //output =[24, 12, 8, 6]
 		
 		
-		int left[] = new int[nums.length];
-		int right[] = new int[nums.length];
-		int resultArr[] =new int[nums.length];
+		int left[] = new int[nums.length]; //1,1,2,6
+		int right[] = new int[nums.length];//24,12,4,1
+		int resultArr[] =new int[nums.length];//output =[24, 12, 8, 6]
 		
 		left[0] = 1;
 		
