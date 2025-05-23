@@ -19,7 +19,7 @@ public class JumpGame {
 		int reach = 0;
 		for (int i = 0; i <= reach; i++) {
 			reach = Math.max(reach, i + arr[i]);
-			if (reach >= arr.length) {
+			if (reach >= arr.length-1) {
 				return true;
 			}
 		}
