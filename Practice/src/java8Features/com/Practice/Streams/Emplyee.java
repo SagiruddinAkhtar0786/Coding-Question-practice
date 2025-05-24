@@ -87,9 +87,6 @@ public class Emplyee {
 				.collect(Collectors.toList());
 		
 		System.out.println(salaryGreater);
-		
-
-		
 	}
 
 }
