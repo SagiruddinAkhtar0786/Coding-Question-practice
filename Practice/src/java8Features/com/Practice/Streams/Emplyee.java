@@ -8,11 +8,13 @@ class Employee {
 	int id;
 	String name;
 	int age;
+	int salary;
 	
-	public Employee(int id, String name, int age) {
+	public Employee(int id, String name, int age,int salary) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
+		this.salary= salary;
 	}
 
 	public int getId() {
@@ -39,6 +41,9 @@ class Employee {
 		this.age = age;
 	}
 	
+	public int getSalary() {
+		return salary;
+	}
 	
 
 	/*
@@ -54,11 +59,11 @@ public class Emplyee {
 		// TODO Auto-generated method stub
 		
 		List<Employee> lst = new ArrayList<>();
-		lst.add(new Employee(1,"sagir",27));
-		lst.add(new Employee(2,"Raju",32));
-		lst.add(new Employee(4,"Irfan",82));
-		lst.add(new Employee(5,"sameer",62));
-		lst.add(new Employee(3,"sagar",30));
+		lst.add(new Employee(1,"sagir",27,100000));
+		lst.add(new Employee(2,"Raju",32,200000));
+		lst.add(new Employee(4,"Irfan",82,23000));
+		lst.add(new Employee(5,"sameer",62,560000));
+		lst.add(new Employee(3,"sagar",30,564444));
 		
 		//System.out.println(lst);
 		
@@ -66,8 +71,23 @@ public class Emplyee {
 			System.out.println(emp.getId() +" "+emp.getName() +" "+emp.getAge());
 		}
 		
+		//get all names of employees
 		List<String> empNams = lst.stream().map(Employee :: getName).collect(Collectors.toList());
 		System.out.println(empNams);
+		
+		// get salary
+		
+		List<Integer> salList = lst.stream().map(Employee :: getSalary).collect(Collectors.toList());
+		System.out.println(salList);
+		
+		//salary greate then 200000
+		
+		List<Integer> salaryGreater = lst.stream().filter(ListEmp->ListEmp.getSalary() > 200000)
+				.map(Employee :: getSalary)
+				.collect(Collectors.toList());
+		
+		System.out.println(salaryGreater);
+		
 
 		
 	}
