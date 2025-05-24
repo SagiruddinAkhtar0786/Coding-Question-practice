@@ -14,10 +14,19 @@ class Student implements Comparable<Student> {
 		this.age = age;
 	}
 
-	public int compareTo(Student st) {
+	/*public int compareTo(Student st) { // comparable using list
 		if (age == st.age)
 			return 0;
 		else if (age > st.age)
+			return 1;
+		else
+			return -1;
+	}*/
+	
+	public int compareTo(Student st) { // comparable using list
+		if (rollno == st.rollno)
+			return 0;
+		else if (rollno > st.rollno)
 			return 1;
 		else
 			return -1;
