@@ -28,7 +28,6 @@ public class reverseByWord {
 			if(i > 0) sb.append(" ");
 		}
 		System.out.println(sb.toString());
-
 	}
 	public static void reverseByWOrdUsingStream (String s) {
 		
