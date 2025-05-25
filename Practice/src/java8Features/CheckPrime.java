@@ -15,6 +15,7 @@ public class CheckPrime {
 		boolean b = n > 1 && IntStream.rangeClosed(2, (int) Math.sqrt(n)).noneMatch(i -> n%i == 0);
 		System.out.println(b);
 		
+		
 	}
 
 }

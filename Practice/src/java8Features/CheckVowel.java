@@ -27,7 +27,6 @@ public class CheckVowel {
 		else
 			System.out.println("Found Matches at index "+index);
 		
-		
 		String strr= "sagir";
 		boolean chk2 = strr.chars().mapToObj(x-> (char)x).noneMatch(c-> "aeiou".indexOf(c) != -1);
 		if(!chk2) {
