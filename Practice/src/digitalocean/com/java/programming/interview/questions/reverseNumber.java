@@ -32,6 +32,10 @@ public class reverseNumber {
 		
 	//	Integer.parseInt(a);
 		String convertedString = Integer.toString(a);
+		String Sr = String.valueOf(a);
+
+		StringBuilder sb1 = new StringBuilder(Sr);
+		System.out.println("sr >> "+sb1.reverse());
 		
 		StringBuilder sb = new StringBuilder(convertedString).reverse();
 		System.out.println("reversed Integer using Integer.toString() method >> "+sb);
