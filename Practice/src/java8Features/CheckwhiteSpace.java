@@ -21,7 +21,6 @@ public class CheckwhiteSpace {
 				sb.append(c);
 			}
 		}
-		
 		sb1 = IntStream.range(0, str.length())
 						.filter(x -> str.charAt(x) != ' ')
 						.mapToObj(i-> str.charAt(i))// or
