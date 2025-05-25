@@ -36,6 +36,12 @@ public class SortHashMapByValueIII {
 		scores.put("Dino", 65);
 
 		System.out.println(scores);
+		
+		scores
+		.entrySet()
+		.stream()
+		//.sorted(Map.Entry.comparingByValue())//sort by value 
+		.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach((entry) -> System.out.println(entry.getKey() +" :: "+entry.getValue()));
 
 		Map<String,Integer> shortedScores = sortByValueUsingJava8(scores);
 		
