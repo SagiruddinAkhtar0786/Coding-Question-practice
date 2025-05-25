@@ -31,7 +31,6 @@ public class CheckpalinDrome {
 		
 		System.out.println(str.equals(ModifyStr));
 
-		
 	}
 	private static void checkPalindrome(int num) {
 		String str = String.valueOf(num);
