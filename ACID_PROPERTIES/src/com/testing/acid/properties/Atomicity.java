@@ -12,7 +12,6 @@ public class Atomicity {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		Statement st = null;
-		
 		try {
             // Establish connection to the database
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ACID", "root", "123456");
