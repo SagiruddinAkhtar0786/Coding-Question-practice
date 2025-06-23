@@ -26,8 +26,6 @@ class UnionBank1 implements Banking1<String>{
 		return name;
 	}
 	
-	
-	
 }
 public class InterfaceExampleGeneric {
 
