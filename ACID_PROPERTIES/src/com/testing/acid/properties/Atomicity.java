@@ -18,7 +18,7 @@ public class Atomicity {
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ACID", "root", "123456");
 			// disabel autoCommit mode for manual transaction management
 			
-			System.out.println("Conected successfully");
+			System.out.println("Conected successfully"); 
 			con.setAutoCommit(false);
 			
 			//create statement
