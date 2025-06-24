@@ -6,7 +6,6 @@ interface Banking<T> {
 	
 	void setName(T name);
 	T getName();
-
 }
 
 class UnionBank implements Banking<String>{
