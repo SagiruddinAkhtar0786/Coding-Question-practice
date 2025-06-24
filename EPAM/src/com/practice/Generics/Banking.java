@@ -2,8 +2,6 @@ package com.practice.Generics;
 
 interface Banking<T> {
 	
-
-	
 	void setName(T name);
 	T getName();
 }
