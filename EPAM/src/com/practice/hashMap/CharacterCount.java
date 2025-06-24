@@ -44,9 +44,11 @@ public class CharacterCount {
 			}
 		}
 		
-		System.out.println("unique Elements :: "+unique);
+		System.out.println(" only uniqueunique Elements :: "+unique);
 		
 System.out.println("********************************************************");
+
+
 
 
 
