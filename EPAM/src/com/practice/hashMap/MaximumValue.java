@@ -2,6 +2,8 @@ package com.practice.hashMap;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
 
 public class MaximumValue {
 
@@ -30,7 +32,17 @@ public class MaximumValue {
 		System.out.println("maxSalary : "+maxSal);
 		System.out.println(maxSalPerson);
 
+		System.out.println("using java 8");
+		Optional<Entry<String,Integer>>	opt =map.entrySet().stream().max((a,b) -> a.getValue() -b.getValue());
+		
+		if(opt.isPresent())
+			System.out.println("maximum value :: "+opt.get());
+		
+		Optional<Entry<String,Integer>>	maximum =map.entrySet().stream().max((a,b) -> a.getValue().compareTo(b.getValue()));
 
+		if(maximum.isPresent())
+			System.out.println("maximum value :: "+maximum.get());
+		
 
 
 	}
