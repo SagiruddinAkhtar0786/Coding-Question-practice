@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Atomicity {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Connection con = null;
