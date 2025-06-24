@@ -22,7 +22,7 @@ public class ThreeSum_Repeat {
 		
 		if(nums.length == 0 || nums.length < 3) return new ArrayList<>();
 		
-		Arrays.sort(nums);
+		Arrays.sort(nums); // must sort for protecting test cases failed
 		
 		Set<List<Integer>> set = new HashSet<>();
 		

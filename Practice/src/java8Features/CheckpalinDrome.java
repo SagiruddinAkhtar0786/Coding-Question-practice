@@ -2,7 +2,10 @@ package java8Features;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
+/*
+ * A palindrome is a word, number, phrase, or sequence of characters that reads the same
+ *  forward and backward, ignoring spaces, punctuation, and capitalization.
+ */
 public class CheckpalinDrome {
 
 	public static void main(String[] args) {
@@ -21,14 +24,13 @@ public class CheckpalinDrome {
 		// TODO Auto-generated method stub
 		
 		String ModifyStr = IntStream.range(0,str.length())
-							.mapToObj(x -> str.charAt(str.length() - 1-x))
+							.mapToObj(x -> str.charAt(str.length()-1-x))
 							.peek(x-> System.out.print(x+" "))
 							.map(String :: valueOf)
 							.collect(Collectors.joining());
 		
 		System.out.println(str.equals(ModifyStr));
 
-		
 	}
 	private static void checkPalindrome(int num) {
 		String str = String.valueOf(num);
@@ -40,7 +42,7 @@ public class CheckpalinDrome {
 							.collect(Collectors.joining());*/
 		
 		String ModifiedStr = IntStream.range(0, str.length())
-				.mapToObj(i -> str.charAt(str.length()  - 1 - i))
+				.mapToObj(i -> str.charAt(str.length() - 1 - i))
 				.map(String :: valueOf)
 				.collect(Collectors.joining());
 		

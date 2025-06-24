@@ -18,8 +18,7 @@ public class FindIndexOTheFirstOccurrenceinString {
 	private static int findIndexOffirstOccurencesOfString(String s1, String s2) {
 		// TODO Auto-generated method stub
 		 if(s1.contains(s2))
-			 return s1.indexOf(s2);
-		
+			 return s1.indexOf(s2);		
 		return -1;
 	}
 

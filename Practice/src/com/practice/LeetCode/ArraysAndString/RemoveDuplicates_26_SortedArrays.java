@@ -14,21 +14,23 @@ public class RemoveDuplicates_26_SortedArrays {
 
 		int count1 = removeDublicates1(nums1);
 		System.out.println("count 1 : "+count1);
+		int nums2[] = {1,2,2,2,3,4,5,5,6,7,8,8};
+		int cnt = removeDuplicates3(nums2);
+		System.out.println("count 2 while loop : "+cnt);
+
 		
 		
 		
 	}
-
+//123345
+	//11123
 	private static int removeDublicates1(int[] nums) {
-		// TODO Auto-generated method stub
-		int count = 0;
 		int j = 0;
 		for(int i = 1 ; i<nums.length ; i++) {
 			if(nums[i] != nums[j]) {				
 				nums[++j] = nums[i];
 			}
 		}
-		
 		System.out.println(Arrays.toString(nums));
 		return j+1;
 	}
@@ -49,7 +51,26 @@ public class RemoveDuplicates_26_SortedArrays {
 
 		return count;
 	}
+// while use
+	//[1, 2, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8]
+	public static int removeDuplicates3(int[] nums) {
+        int i = 0;
+        int j;
+        int count = 0;
 
+        while( i < nums.length-1){
+            j = i+1;
+            if(nums[i] != nums[j]){
+                nums[count++] = nums[i];
+               
+            }
+            i++;
+        }
+
+        nums[count++] = nums[nums.length-1];
+
+        return count;
+    }
 	
 
 }

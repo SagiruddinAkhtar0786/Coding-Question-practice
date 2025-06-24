@@ -9,7 +9,6 @@ public class IntegerToRoman {
 		String code[] = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
 		
 		int num = 1994; //MCMXCVI
-		
 		String roman = intToRoman(intCode,code,num);
 		
 		System.out.println(num +"::"+roman );

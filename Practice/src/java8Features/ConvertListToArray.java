@@ -19,9 +19,8 @@ public class ConvertListToArray {
 		
 		System.out.println(Arrays.toString(arr));
 		
-		
 		int [] StreamList = lst.stream()
-							.mapToInt(x ->x) //.ampToInt(Integer :: intValue)
+							.mapToInt(x ->x) //.mapToInt(Integer :: intValue)
 							.toArray();
 		
 		System.out.println(Arrays.toString(StreamList));

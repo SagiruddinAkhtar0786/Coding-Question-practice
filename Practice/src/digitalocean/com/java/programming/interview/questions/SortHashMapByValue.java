@@ -51,8 +51,13 @@ public class SortHashMapByValue {
 		
 		System.out.println("Sorted Map :: "+sortedMap);
 		
+		Map<String,Integer> map = emp.entrySet().stream()
+						.sorted(Map.Entry.comparingByValue())
+						.collect(Collectors.toMap(Map.Entry :: getKey,
+								Map.Entry :: getValue,
+								(oldv,newv) -> oldv,LinkedHashMap :: new));
 		
-		
+		System.out.println(map);
 		
 		//for()
 		

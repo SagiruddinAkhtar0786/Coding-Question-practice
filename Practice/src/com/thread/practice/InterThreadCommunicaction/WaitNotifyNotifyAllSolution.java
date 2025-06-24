@@ -11,8 +11,8 @@ class totalEarnngss extends Thread {
 				total +=100;			
 			}
 			//notify to the thread that task completed
-			this.notify();
-		}
+			this.notify();//wakes up the waiting thread
+		} // releases the lock on TE after exiting the block
 		
 	}
 }
@@ -25,14 +25,16 @@ public class WaitNotifyNotifyAllSolution {
 		
 		synchronized(TE) {
 			try {
-				TE.wait();
+				// 🔒 Lock acquired here
+			    TE.wait();       // ❗ Releasing lock temporarily and waiting
+			    // 🔒 Lock re-acquired after being notified
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		
-		System.out.println("total earning after wait nad notify :: "+TE.total+"Rs");
+		System.out.println("total earning after wait nad notify :: "+TE.total+" Rs.");
 	}
 
 }

@@ -11,7 +11,6 @@ class totalEarnings extends Thread{
 	}
 }
 
-
 public class WaitNotifyNotifyAll {
 
 	public static void main(String[] args) {
@@ -19,7 +18,7 @@ public class WaitNotifyNotifyAll {
 		totalEarnings TE = new totalEarnings();
 		TE.start();
 		
-		System.out.println("Total Earnings : "+TE.total+"Rs");
+		System.out.println("Total Earnings : "+TE.total+" Rs.");
 	}
 
 }

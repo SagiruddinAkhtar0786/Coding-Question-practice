@@ -13,8 +13,6 @@ public class DistinctStringAndtheircount {
 		String [] fruits = {"banana", "grapes", "abnana", "banana", "Orange", "Orange", "abnana"};
 		
 		fruitsCountByJava8(fruits);
-		
-		
 
 	}
 
@@ -35,6 +33,9 @@ public class DistinctStringAndtheircount {
 		Collectors.counting()
 		For each group (each fruit name), it counts how many times that fruit appears.*/
 		System.out.println(fruitCount);
+		
+		Map<String,Long> m = Arrays.stream(fruits).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		 System.out.println("map 000 : "+m);
 		
 	}
 
