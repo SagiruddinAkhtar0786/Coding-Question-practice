@@ -1,9 +1,15 @@
 package com.practice.hashMap;
-
+/*
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;*/
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+import java.util.Map;
 
 public class CharacterCount {
 
@@ -46,8 +52,10 @@ public class CharacterCount {
 		
 		System.out.println(" only uniqueunique Elements :: "+unique);
 		
-System.out.println("********************************************************");
+System.out.println("*************************Java 8 Features*******************************");
 
+Map<Character,Long> charCountJava8= str.chars().mapToObj(c -> (char)c).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+System.out.println("charCountJava8 >> "+charCountJava8);
 
 
 
