@@ -19,6 +19,7 @@ public class TwoSumII_Input_Array_Is_Sorted {
 			System.out.println(i+1);
 		//System.out.println(idx[0]+1+", "+idx[1]+1);
 	}
+	
 	private static int[] twoSumOrderOfN(int[] arr, int target) {
 		// TODO Auto-generated method stub
 		int left = 0,right=arr.length-1;
