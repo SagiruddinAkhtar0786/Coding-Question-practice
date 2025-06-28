@@ -18,7 +18,6 @@ public class TwoSum {
 	}
 	
 	private static int[] findTargetIndex(int arr[] ,int target) {
-		
 		Map<Integer,Integer> map = new HashMap<>();
 		int index[] = new int[2];
 		

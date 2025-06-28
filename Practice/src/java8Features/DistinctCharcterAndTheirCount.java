@@ -42,13 +42,13 @@ public class DistinctCharcterAndTheirCount {
 
 		charcterCountUsingJava8(str);
 		
-		int arr[] = {1,2,3,4,5,1,2,62,2,4};
-		charcterCountUsingJava8try(arr);
 		
 		
 		int num = 121112345;
 		charcterCountUsingJava8tryInt(num);		
 
+		int arr[] = {5,32,1,2,3,4,5,1,2,62,2,4};
+		charcterCountUsingJava8try(arr);
 	}
 
 	private static void charcterCountUsingJava8tryInt(int num) {
@@ -66,9 +66,9 @@ public class DistinctCharcterAndTheirCount {
 		// TODO Auto-generated method stub
 		
 		Map<Integer,Long> intCount = Arrays.stream(arr) // returns IntStream
-									//.boxed() // converts to Stream<Integer>
-								//	.mapToObj(x ->x)
-								.mapToObj(Integer :: valueOf)
+									.boxed() // converts to Stream<Integer>
+									//.mapToObj(x ->x) // correct
+							//	.mapToObj(Integer :: valueOf) // this also correct
 									.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 		System.out.println("int count "+intCount);
