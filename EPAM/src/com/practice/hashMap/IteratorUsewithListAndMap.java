@@ -16,22 +16,41 @@ public class IteratorUsewithListAndMap {
 		list.add("ahim");
 		list.add("shamma");
 
-		
-		Iterator itrr= list.iterator();
-		
-		while(itrr.hasNext()) {
-			//String ele = itrr.next();
+		Iterator itrr = list.iterator();
+
+		while (itrr.hasNext()) {
+			// String ele = itrr.next();
 			System.out.println(itrr.next());
 		}
-		
-		Map<String,Integer> map = new HashMap<>();
+		System.out.println("**************map key set************");
+		Map<String, Integer> map = new HashMap<>();
 		map.put("ram", 123);
 		map.put("rahim", 786);
-		
+
 		// keyset
 		Iterator<String> keyset = map.keySet().iterator();
-		System.out.println(keyset);
+		while (keyset.hasNext()) {
+
+			System.out.println(keyset.next());
+		}
+		System.out.println("**************map value set************");
+
+		Iterator<Integer> mapValues = map.values().iterator();
+		while (mapValues.hasNext()) {
+
+			System.out.println(mapValues.next());
+		}
+
+		System.out.println("**************Map entry set ***********");
 		
+		Iterator<Map.Entry<String, Integer>> itrSet = map.entrySet().iterator();
+		while (itrSet.hasNext()) {
+
+			System.out.println(itrSet.next());
+		}
+
+		//System.out.println("**************Map entry set ***********");
+
 	}
 
 }
