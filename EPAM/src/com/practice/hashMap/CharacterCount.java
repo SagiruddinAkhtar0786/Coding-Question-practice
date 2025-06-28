@@ -63,3 +63,29 @@ System.out.println("charCountJava8 >> "+charCountJava8);
 	}
 
 }
+
+/*
+  // Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.function.Function;
+
+import java.util.stream.Collectors;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,1,2,3,4,5);
+        Map<Integer,Long> listedMap = list.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        
+        System.out.println(listedMap);
+        
+        String str = "aassdddfffffgggttqwwww";
+        
+        Map<Character,Long> modifiedList = str.chars().mapToObj(x -> (char) x).collect(Collectors.groupingBy(Function.identity() , Collectors.counting()));
+        
+        System.out.println(modifiedList);
+        
+        
+    }
+}
+ */
