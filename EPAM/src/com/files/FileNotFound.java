@@ -26,6 +26,18 @@ public class FileNotFound {
 		}
 		
 		bf.close();
+		
+		
+		/*
+		  FileInputStream fis = new FileInputStream("D:\\example.txt");
+
+        int b;
+        while ((b = fis.read()) != -1) {
+            System.out.print((char) b); // converting byte to char
+        }
+
+        fis.close();
+		 */
 	}
 
 }
@@ -33,3 +45,17 @@ public class FileNotFound {
 //file
 //FileReader
 //bufferedReder
+
+
+/*
+ * Often used together in combinations:
+ * 
+ * File: To check if a file exists or get its path/size.
+ * 
+ * FileReader: To read text character by character.
+ * 
+ * BufferedReader: To wrap FileReader and read text line by line efficiently.
+ * 
+ * FileInputStream: To read binary data (like images or videos) as bytes.
+ * 
+ */
