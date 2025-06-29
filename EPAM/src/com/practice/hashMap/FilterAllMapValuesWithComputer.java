@@ -29,6 +29,15 @@ public class FilterAllMapValuesWithComputer {
 							.collect(Collectors.toList());
 			
 			System.out.println(listValues);
+			
+			System.out.println("********************************");
+			
+		List<Map.Entry<Integer, String>> revStr =map.entrySet().stream()
+							.filter(x -> x.getValue().equalsIgnoreCase("Computer"))
+							.sorted((x,y) -> y.getKey().compareTo(x.getKey()))
+							.collect(Collectors.toList());
+		
+		System.out.println("reveresed list "+revStr);
 
 	}
 
