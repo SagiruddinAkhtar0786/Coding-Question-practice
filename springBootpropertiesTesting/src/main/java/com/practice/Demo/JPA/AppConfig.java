@@ -13,8 +13,30 @@ import lombok.Data;
 
 public class AppConfig {
 
-	String name ;
-	int port;
+	//String name ;
+	//int port;
 	String getProp;
+	
+	Applcation applcation = new Applcation();
+	
+	public static class Applcation{
+		String name ;
+		int port;
+		
+		
+		// getters and setters
+        public String getName() {
+            return name;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+        public int getPort() {
+            return port;
+        }
+        public void setPort(int port) {
+            this.port = port;
+        }
+	}
 
 }

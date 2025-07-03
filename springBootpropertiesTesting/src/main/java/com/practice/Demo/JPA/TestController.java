@@ -18,9 +18,9 @@ public class TestController {
 	@GetMapping()
 	@ResponseBody
 	public String getProperteis() {
-		System.out.println("app name :: "+appconfig.getName() +" , app port :: "+appconfig.getPort());
+		System.out.println("app name :: "+appconfig.applcation.getName() +" , app port :: "+appconfig.applcation.getPort());
 		System.out.println("get properties :: "+appconfig.getProp);
-		return "app name :: "+appconfig.getName() +" , app port :: "+appconfig.getPort();
+		return "app name :: "+appconfig.applcation.getName() +" , app port :: "+appconfig.applcation.getPort();
 		
 	}
 	
