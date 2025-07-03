@@ -17,11 +17,15 @@ public class AppConfig {
 	//int port;
 	String getProp;
 	
-	Applcation applcation = new Applcation();
+//	@Value("${values.valueProp}")
+	String TestignValue;
 	
-	public static class Applcation{
+	private Application  applcation = new Application();
+	
+	public static class Application{
 		String name ;
 		int port;
+	//	private Application applcation;
 		
 		
 		// getters and setters
@@ -37,6 +41,17 @@ public class AppConfig {
         public void setPort(int port) {
             this.port = port;
         }
+        
+        
+      
 	}
+
+	public Application getApplcation() {
+		// TODO Auto-generated method stub
+		return applcation;
+	}
+	 public void setApplication(Application applcation) {
+	        this.applcation = applcation;
+	    }
 
 }
