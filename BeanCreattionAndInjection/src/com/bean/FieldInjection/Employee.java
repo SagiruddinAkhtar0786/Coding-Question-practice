@@ -10,4 +10,11 @@ public class Employee {
         this.name = name;
     }
 
+	public void showDetails() {
+		// TODO Auto-generated method stub"bean crarred
+		
+		System.out.println("bean created");
+		
+	}
+
 }

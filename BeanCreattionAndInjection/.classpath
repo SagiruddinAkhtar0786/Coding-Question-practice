@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="src/spring-context-6.2.8.jar"/>
 	<classpathentry kind="lib" path="src/spring-context-6.2.8 (1).jar"/>
 	<classpathentry kind="lib" path="src/spring-core-6.2.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sagir/git/Coding-Question-practice/BeanCreattionAndInjection/src/spring-beans-6.2.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
