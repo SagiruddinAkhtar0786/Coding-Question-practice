@@ -1,5 +1,7 @@
 package com.bean.FieldInjection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Employee {
     private String name;
     // Field Injection using @Autowired
