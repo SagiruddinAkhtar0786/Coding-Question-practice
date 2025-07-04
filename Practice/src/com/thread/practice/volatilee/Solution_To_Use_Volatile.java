@@ -15,7 +15,6 @@ class Thread2 extends Thread {
 		System.out.println("Thread2 detected flag change!");
 	}
 }
-
 public class Solution_To_Use_Volatile {
 	public static void main(String[] args) throws InterruptedException {
 		new Thread2().start();
