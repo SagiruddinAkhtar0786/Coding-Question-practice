@@ -4,6 +4,7 @@ class SharedDataforVolatile {
 	static volatile boolean flag = false; // Using volatile
 }
 
+
 class Thread2 extends Thread {
 	@Override
 	public void run() {
