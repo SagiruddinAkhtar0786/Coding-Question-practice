@@ -1,0 +1,42 @@
+An enum is a special data type that enables a variable to be a set of predefined constants.
+It's used when you know all possible values in advance.
+
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+public class Enum_Question {
+
+	public static void main(String[] args) {
+		Days today = Days.Friday;
+		
+		switch(today){
+		case Monday : 
+			System.out.println("Toay is Monday ");
+			break;
+		case Tuesday:
+			System.out.println("today is tuesday");
+			break;
+			
+		case Friday:
+			System.out.println("Today is Friday >> ");
+			break;
+			
+		default:
+			System.out.println("It is normal day");
+	
+		}
+		
+		System.out.println("\nAll Days");
+		
+		for(Days d : Days.values())
+			System.out.println(d);
+	}
+
+}
+
+🔸 Internally:
+Each enum constant is public, static, and final.
+
+enum implicitly extends java.lang.Enum and cannot extend other classes.
+
+You can define constructors, fields, and methods inside an enum.

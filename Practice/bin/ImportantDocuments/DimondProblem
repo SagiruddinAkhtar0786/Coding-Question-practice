@@ -1,0 +1,65 @@
+The Diamond Problem in Java refers to an issue that can arise in multiple inheritance when
+a class inherits from two classes that both inherit from the same parent class.
+This creates a "diamond-shaped" inheritance structure, which can lead to ambiguity.
+
+        A
+       / \
+      B   C
+       \ /
+        D
+
+        
+Class B and C both inherit from class A.
+
+Class D inherits from both B and C.
+
+Now, if class A has a method (say display()), and B and C don't override it, then which version of display() 
+should D inherit?
+That's the ambiguity that causes the "diamond problem".
+
+Java Avoids the Diamond Problem with Classes
+Java does not support multiple inheritance with classes to prevent this problem. 
+That means you cannot extend more than one class:
+
+class A { void display() { } }
+class B extends A { }
+class C extends A { }
+
+// ❌ This is illegal in Java:
+class D extends B, C { }  // Compilation error
+
+
+&*********************************************************************************************************
+
+Solution
+
+Interfaces and the Diamond Problem
+Java does allow multiple inheritance with interfaces, and it handles ambiguity explicitly:
+
+interface A {
+    default void display() {
+        System.out.println("A");
+    }
+}
+
+interface B extends A {
+    default void display() {
+        System.out.println("B");
+    }
+}
+
+interface C extends A {
+    default void display() {
+        System.out.println("C");
+    }
+}
+
+class D implements B, C {
+    public void display() {
+        // Must resolve the conflict
+        B.super.display();  // or C.super.display();
+    }
+}
+If both B and C provide a default implementation of display(), then D must override it and explicitly choose which one to use.
+
+Java forces you to resolve the ambiguity yourself.
