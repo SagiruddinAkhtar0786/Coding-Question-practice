@@ -31,7 +31,6 @@ public class leadingZerosAndFollowOnes {
 					sb.append(1);
 				}
 				
-				
 				System.out.println(Integer.parseInt(sb.toString()));
 				System.out.println("First 0's then 1's : "+sb.toString());
 				
