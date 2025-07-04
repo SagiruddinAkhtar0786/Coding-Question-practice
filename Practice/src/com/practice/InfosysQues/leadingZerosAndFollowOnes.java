@@ -24,7 +24,6 @@ public class leadingZerosAndFollowOnes {
 					if(c=='1')
 						c1++;
 				}
-				
 				for(int i= 0;i<c0;i++) {
 					sb.append(0);
 				}
