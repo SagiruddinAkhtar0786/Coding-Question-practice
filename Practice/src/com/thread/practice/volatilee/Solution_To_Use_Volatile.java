@@ -5,9 +5,11 @@ class SharedDataforVolatile {
 }
 
 class Thread2 extends Thread {
+	@Override
 	public void run() {
 		while (!SharedDataforVolatile.flag) {
 			// Now, flag is always read from main memory
+			System.out.println("flag is always read from main memory");
 		}
 		System.out.println("Thread2 detected flag change!");
 	}
@@ -16,7 +18,7 @@ class Thread2 extends Thread {
 public class Solution_To_Use_Volatile {
 	public static void main(String[] args) throws InterruptedException {
 		new Thread2().start();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		SharedDataforVolatile.flag = true; // Now, Thread2 will see the update
 		System.out.println("Main thread updated flag to true");
 	}
