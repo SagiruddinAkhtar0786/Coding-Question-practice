@@ -1,20 +1,20 @@
 package com.Linkedlist;
 
-class Node{
+class NodeList{
 	int data;
-	Node next;
+	NodeList next;
 	
-	public Node(int data) {
+	public NodeList(int data) {
 		this.data = data;
 		this.next = null;
 	}
 }
 public class MergeLinkedList {
 	
-	public static Node mergeNode(Node l1, Node l2) {
+	public static NodeList mergeNode(NodeList l1, NodeList l2) {
 		
-		Node dummy = new Node(0);
-		Node curr= dummy;
+		NodeList dummy = new NodeList(0);
+		NodeList curr= dummy;
 		
 		
 		while(l1 != null && l2 != null) {
@@ -35,18 +35,18 @@ public class MergeLinkedList {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Node node1 = new Node(2);
+		NodeList node1 = new NodeList(2);
 		//node.next = new Node(3);
-		Node node2 = new Node(2);
+		NodeList node2 = new NodeList(2);
 		//node.next = new Node(3);
-		Node node =  mergeNode(node1, node2);
+		NodeList node =  mergeNode(node1, node2);
 		printlist(node);
 
 	}
 
-	private static void printlist(Node node) {
+	private static void printlist(NodeList node) {
 		// TODO Auto-generated method stub
-		Node head = node;
+		NodeList head = node;
 		while(head != null) {
 			
 			System.out.print(head.next+" -> ");
