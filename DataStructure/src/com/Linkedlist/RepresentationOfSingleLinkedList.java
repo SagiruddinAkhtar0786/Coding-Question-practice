@@ -8,7 +8,7 @@ public class RepresentationOfSingleLinkedList {
 		private int data;
 		private ListNode next;
 		
-		public ListNode() {
+		public ListNode(int data) {
 			this.data = data;
 			this.next = null;
 		}
