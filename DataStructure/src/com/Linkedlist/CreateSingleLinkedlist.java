@@ -32,6 +32,10 @@ public class CreateSingleLinkedlist {
 	int count = 0;
 	public void LinkedListLength() {
 		ListNode curr = head;
+		if(head == null) {
+			System.out.println("length of Linked List :: "+0);
+			return;
+		}
 		
 		while(curr != null) {
 			count++;
