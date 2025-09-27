@@ -27,10 +27,20 @@ public class CreateSingleLinkedlist {
 			curr = curr.next;
 		}
 		System.out.println("null");
-		
-		
 	}
+// find length
+	int count = 0;
+	public void LinkedListLength() {
+		ListNode curr = head;
+		
+		while(curr != null) {
+			count++;
+			curr = curr.next;
+		}
+		
+		System.out.println("count :: "+count);
 
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CreateSingleLinkedlist ll = new CreateSingleLinkedlist();
@@ -45,6 +55,7 @@ public class CreateSingleLinkedlist {
 		l4.next = null;
 		
 		ll.printLinkedList();
+		ll.LinkedListLength();
 	}
 
 }
