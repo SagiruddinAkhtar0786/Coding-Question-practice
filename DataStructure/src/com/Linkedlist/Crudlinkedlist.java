@@ -105,7 +105,43 @@ public class Crudlinkedlist {
 	}
 
 	// delete Node at given index
+	private ListNode deleteAtGivenIndex(int index) {
+		// TODO Auto-generated method stub
+		ListNode curr;
+		if(index == 1) { // Case 1: delete first node
+			curr = head;
+			head = head.next;
+			return curr;// return deleted node
+		}
+		else {
+			ListNode prevNode = head;
+			int count = 1;
+			while(count < index-1) {
+				prevNode = prevNode.next;
+				count++;
+			}
+			curr = prevNode.next;
+			prevNode.next = curr.next;
+		}
 	
+		
+		return curr;
+	}
+// search an element in single Linked List
+	
+	public boolean SearchElement(int val) {
+		ListNode curr = head;
+		
+		while(curr.next !=null) {
+			
+			if(curr.data == val)
+				return true;
+			
+			curr = curr.next;
+		}
+		
+		return false;
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -144,30 +180,14 @@ public class Crudlinkedlist {
 		ListNode DeleteNodeIndex = CL.deleteAtGivenIndex(3);
 		System.out.println("deleted Node of Last :: " + DeleteNodeIndex.data);
 		CL.printLinkedList();
-
-	}
-
-	private ListNode deleteAtGivenIndex(int index) {
-		// TODO Auto-generated method stub
-		ListNode curr;
-		if(index == 1) { // Case 1: delete first node
-			curr = head;
-			head = head.next;
-			return curr;// return deleted node
-		}
-		else {
-			ListNode prevNode = head;
-			int count = 1;
-			while(count < index-1) {
-				prevNode = prevNode.next;
-				count++;
-			}
-			curr = prevNode.next;
-			prevNode.next = curr.next;
-		}
-	
 		
-		return curr;
+		boolean checkElement = CL.SearchElement(4);
+		if(checkElement)
+			System.out.println("element found ...");
+		else
+			System.out.println("element not found");
+
 	}
 
+	
 }
