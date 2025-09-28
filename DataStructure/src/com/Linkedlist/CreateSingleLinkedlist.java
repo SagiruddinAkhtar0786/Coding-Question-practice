@@ -2,7 +2,7 @@ package com.Linkedlist;
 
 public class CreateSingleLinkedlist {
 	
-	ListNode head;
+	ListNode head =null;
 	
 	private static class ListNode{
 		int data;
@@ -45,6 +45,10 @@ public class CreateSingleLinkedlist {
 		System.out.println("count :: "+count);
 
 	}
+	
+	// insert Node at First
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CreateSingleLinkedlist ll = new CreateSingleLinkedlist();
