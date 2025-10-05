@@ -1,7 +1,7 @@
 package com.Linkedlist;
 
 public class FindnthNodeFromTheEndOfLinkedList {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -13,6 +13,9 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		node.next.next.next.next = new CommonNode(23);
 		node.next.next.next.next.next = new CommonNode(29);
 		
+		cn.printList(node);
+		CommonNode nthNode = cn.getNthNodeFromEnd(node, 4);
+		System.out.println("nthNode :: "+nthNode.data);
 		cn.printList(node);
 	}
 	
