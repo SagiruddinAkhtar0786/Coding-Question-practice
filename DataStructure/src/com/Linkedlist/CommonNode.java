@@ -27,6 +27,7 @@ public class CommonNode {
 		System.out.println("null");
 	}
 	
+	// nth node from end of singly Linked List
 	public CommonNode getNthNodeFromEnd(CommonNode head,int n) {
 		//return CommonNode;
 		if(head == null) {
@@ -57,6 +58,21 @@ public class CommonNode {
 		 
 		 return mainPtr;
 		 
+	}
+	// remove dublicate from sorted linked List
+	
+	public CommonNode removeDublictaeFromsortedLinkedList(CommonNode head) {
+		CommonNode temp = head;
+		System.out.println(temp.data);
+		while(temp != null && temp.next != null) {
+			if(temp.data == temp.next.data) {
+				temp.next = temp.next.next;
+			}
+			else {
+				temp = temp.next;
+			}
+		}
+		return temp;
 	}
 
 }
