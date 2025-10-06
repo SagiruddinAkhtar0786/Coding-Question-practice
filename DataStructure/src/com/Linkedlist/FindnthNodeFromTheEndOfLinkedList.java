@@ -20,6 +20,10 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		CommonNode dublicateNode=cn.removeDublictaeFromsortedLinkedList(node);
 		System.out.println("removed Dublicated Node :: "+dublicateNode.data);
 		cn.printList(node);
+		// insert new node in sorted List
+		CommonNode insertNewNode=cn.inserNewNodeInsortedLinkedList(node);
+		System.out.println("removed Dublicated Node :: "+insertNewNode.data);
+		cn.printList(node);
 	}
 
 	
