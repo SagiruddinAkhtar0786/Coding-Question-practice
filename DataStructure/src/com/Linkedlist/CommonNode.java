@@ -116,4 +116,43 @@ public class CommonNode {
 		
 		return head;
 	}
+	
+	
+	// crete a linked List ahving Loop
+	
+	public CommonNode createListOfLoop() {
+		CommonNode n1 = new CommonNode(1);	
+		CommonNode n2 = new CommonNode(2);	
+		CommonNode n3 = new CommonNode(3);	
+		CommonNode n4 = new CommonNode(4);	
+		CommonNode n5 = new CommonNode(5);	
+		CommonNode n6 = new CommonNode(6);	
+		
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		n5.next = n6;
+		n6.next = n3; // creates loop
+		
+		return n1;
+	}
+		
+	
+	// DetectLoopInLinkedList
+	
+	public boolean DetectLoopInLinkedList(CommonNode head) {
+		
+		CommonNode fastPtr = head;
+		CommonNode slowPtr = head;
+		
+		while(fastPtr != null &&  fastPtr.next != null) {
+			fastPtr = fastPtr.next.next;
+			slowPtr = slowPtr.next;
+			
+			if(fastPtr == slowPtr)
+				return true;
+		}
+		return false;
+	}
 }

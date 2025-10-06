@@ -36,7 +36,21 @@ public class FindnthNodeFromTheEndOfLinkedList {
 			
 			System.out.println("Key not found to remove ");
 		}
-	
+		
+		//create a list with Loop
+		CommonNode loopNode = cn.createListOfLoop();
+		
+		System.out.println("Loop Node List");
+		//cn.printList(loopNode); // infinite loop
+		
+		//detect Loop in linkedList
+		boolean detectLoop = cn.DetectLoopInLinkedList(loopNode);
+		
+		if(detectLoop)
+			System.out.println("true");
+		else
+			System.out.println("not a loop");
+
 		
 	}
 
