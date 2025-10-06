@@ -26,6 +26,18 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		System.out.println("inserted New Node :: "+insertNewNode.data);
 	
 		cn.printList(node);
+		// remove key from teh list
+		System.out.println("Removed Node :: ");
+
+		CommonNode removeKey=cn.removeKeyFromSortedLinkedList(node,5);
+		if(removeKey !=null) {
+			cn.printList(node);
+		}else {
+			
+			System.out.println("Key not found to remove ");
+		}
+	
+		
 	}
 
 	

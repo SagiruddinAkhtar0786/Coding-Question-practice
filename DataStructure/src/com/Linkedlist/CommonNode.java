@@ -93,4 +93,27 @@ public class CommonNode {
 		return head;
 	}
 
+	
+	// remove key from the list
+	
+	public CommonNode removeKeyFromSortedLinkedList(CommonNode head, int key) {
+		 CommonNode curr = head;
+		 CommonNode temp = null;
+		 
+		 if(head == null) {
+				return null;
+			}
+		 
+		 while(curr != null && curr.data != key) {
+			 temp = curr;
+			 curr = curr.next;
+		 }
+		 if(curr == null) {
+			//System.out.println("did not found the key");
+			return null;
+		 }
+		 temp.next= curr.next;
+		
+		return head;
+	}
 }
