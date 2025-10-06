@@ -9,9 +9,9 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		CommonNode  node = new CommonNode(2);
 		node.next = new CommonNode(3);
 		node.next.next = new CommonNode(3);
-		node.next.next.next = new CommonNode(24);
-		node.next.next.next.next = new CommonNode(23);
-		node.next.next.next.next.next = new CommonNode(29);
+		node.next.next.next = new CommonNode(4);
+		node.next.next.next.next = new CommonNode(6);
+		node.next.next.next.next.next = new CommonNode(9);
 		
 		cn.printList(node);
 		CommonNode nthNode = cn.getNthNodeFromEnd(node, 4);
@@ -21,8 +21,10 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		System.out.println("removed Dublicated Node :: "+dublicateNode.data);
 		cn.printList(node);
 		// insert new node in sorted List
-		CommonNode insertNewNode=cn.inserNewNodeInsortedLinkedList(node);
-		System.out.println("removed Dublicated Node :: "+insertNewNode.data);
+		CommonNode  newNode = new CommonNode(5);
+		CommonNode insertNewNode=cn.inserNewNodeInsortedLinkedList(node,newNode);
+		System.out.println("inserted New Node :: "+insertNewNode.data);
+	
 		cn.printList(node);
 	}
 

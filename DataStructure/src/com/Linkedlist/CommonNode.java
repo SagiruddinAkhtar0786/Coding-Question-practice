@@ -75,9 +75,22 @@ public class CommonNode {
 		return temp;
 	}
 	// insert new node in sorted List
-	public CommonNode inserNewNodeInsortedLinkedList(CommonNode node) {
+	public CommonNode inserNewNodeInsortedLinkedList(CommonNode head ,CommonNode newNode) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		CommonNode current = head;
+		CommonNode temp = null;
+		
+		while(current != null &&  current.data < newNode.data ) {
+			temp = current;
+			current = current.next;
+		}
+		
+		newNode.next= current;
+		temp.next = newNode;
+		
+		
+		return head;
 	}
 
 }
