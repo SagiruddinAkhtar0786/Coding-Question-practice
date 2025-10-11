@@ -155,4 +155,38 @@ public class CommonNode {
 		}
 		return false;
 	}
+	public CommonNode findStartingNodeOfLoop(CommonNode head) {
+		// TODO Auto-generated method stub
+		
+		CommonNode  fastPtr = head;
+		CommonNode  slowPtr = head;
+		
+		while(fastPtr != null &&  fastPtr.next != null) {
+			slowPtr = slowPtr.next;
+			fastPtr = fastPtr.next.next;
+			
+			if(fastPtr ==slowPtr) {
+				return getStarttingNode(head,slowPtr);
+			}
+		}
+		
+		return null;
+	}
+	
+	// find starting Node
+	private CommonNode getStarttingNode(CommonNode head, CommonNode slowPtr) {
+		// TODO Auto-generated method stub
+		CommonNode temp = head;
+		
+		while(slowPtr != temp) {
+			temp = temp.next;
+			slowPtr = slowPtr.next;
+			
+		}
+		return temp;
+	}
+	public CommonNode breakloopOfList(CommonNode loopNode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -47,11 +47,18 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		boolean detectLoop = cn.DetectLoopInLinkedList(loopNode);
 		
 		if(detectLoop)
-			System.out.println("true");
+			System.out.println("true..");
 		else
 			System.out.println("not a loop");
 
+		// find start Node of Loop
 		
+		CommonNode sNode = cn.findStartingNodeOfLoop(loopNode);
+		System.out.println(" start Node of Loop :: "+sNode.data);
+		
+		// remove Loop from singly Linked List
+		CommonNode rNode = cn.breakloopOfList(loopNode);
+		System.out.println(" start Node of Loop :: "+sNode.data);
 	}
 
 	
