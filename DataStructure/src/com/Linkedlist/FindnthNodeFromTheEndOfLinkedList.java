@@ -58,7 +58,8 @@ public class FindnthNodeFromTheEndOfLinkedList {
 		
 		// remove Loop from singly Linked List
 		CommonNode rNode = cn.breakloopOfList(loopNode);
-		System.out.println(" start Node of Loop :: "+sNode.data);
+		System.out.println(" ************* loop broken ");
+		cn.printList(rNode);
 	}
 
 	

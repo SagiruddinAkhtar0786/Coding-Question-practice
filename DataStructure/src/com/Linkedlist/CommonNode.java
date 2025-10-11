@@ -185,8 +185,28 @@ public class CommonNode {
 		}
 		return temp;
 	}
-	public CommonNode breakloopOfList(CommonNode loopNode) {
+	public CommonNode breakloopOfList(CommonNode head) {
 		// TODO Auto-generated method stub
+		CommonNode  fastPtr = head;
+		CommonNode  slowPtr = head;
+		
+		while(fastPtr != null &&  fastPtr.next != null) {
+			slowPtr = slowPtr.next;
+			fastPtr = fastPtr.next.next;
+			
+			if(fastPtr ==slowPtr) {
+				return removeLoop(head,slowPtr);
+			}
+		}
 		return null;
+	}
+	public CommonNode removeLoop(CommonNode head, CommonNode slowPtr) {
+		 CommonNode temp= head;
+		  while(temp.next != slowPtr.next) {
+			  temp = temp.next;
+			  slowPtr = slowPtr.next;
+		  }
+		  slowPtr.next = null;;
+		return head;
 	}
 }
