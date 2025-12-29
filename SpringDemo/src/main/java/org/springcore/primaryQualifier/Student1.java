@@ -9,6 +9,6 @@ public class Student1 implements StudentInterface{
 	
 	@Override
 	public String getName() {
-		return "stuend 1";
+		return "stuend 1 (Primary)";
 	}
 }
