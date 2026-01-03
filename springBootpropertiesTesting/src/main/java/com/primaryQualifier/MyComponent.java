@@ -20,7 +20,9 @@ public class MyComponent {
         this.dataSource = dataSource;
     }
     
-   
+ // If you used only this constructor without @Qualifier,
+    // and you had @Primary on a bean, the primary bean would be injected.
+
 
 
     public void printDataSource() {
